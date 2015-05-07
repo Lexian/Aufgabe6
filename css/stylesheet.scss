@@ -40,7 +40,6 @@
 .circle-container {
   @include on-circle($item-count: 8, $circle-size: 20em, $item-size: 10em);
   float: left;
-  margin-left: 30em;
   margin: 6em;
   border: solid 10px tomato;
 
@@ -49,7 +48,7 @@
     display: block;
     max-width: 60%;
     border-radius: 50%;
-    @include vendor-prefix(filter, grayscale(0));
+    @include vendor-prefix(filter, (grayscale(0)));
     border: solid 5px tomato;
 
     &:hover,
@@ -63,4 +62,8 @@ body{
   background-size: cover;
   resize: horizontal;
 }
-header{}
+header div{
+  width: 95%;
+  height: 40px;
+  background-image: url("../images/BGSideFrame.png");
+}

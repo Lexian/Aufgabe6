@@ -6,7 +6,6 @@
   border-radius: 50%;
   list-style: none;
   float: left;
-  margin-left: 30em;
   margin: 6em;
   border: solid 10px tomato; }
   .circle-container > * {
@@ -86,10 +85,17 @@
       -moz-filter: grayscale(50);
       -o-filter: grayscale(50);
       filter: grayscale(50); }
+    -webkit-filter:
 
 body {
   background-image: url("../images/backgroundPic.png");
   background-size: cover;
   resize: horizontal; }
+
+header div {
+  width: 95%;
+  height: 40px;
+  background-image: url("../images/BGSideFrame.png"); }
+
 
 /*# sourceMappingURL=stylesheet.css.map */
