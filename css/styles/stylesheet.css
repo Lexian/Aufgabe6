@@ -1,3 +1,31 @@
+@charset "UTF-8";
+/*Urls für BDesigns*/
+/* navBar items*/
+/*navBar attribs*/
+/*Fonts*/
+@import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
+/*Urls für BDesigns*/
+/* navBar items*/
+/*navBar attribs*/
+/*Fonts*/
+@import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
+.nav-main {
+  width: 100%;
+  background-color: cornflowerblue;
+  height: 70px;
+  color: #092049;
+  border: solid #4d85ea 3px; }
+  .nav-main .Logo a {
+    font-family: 'Shojumaru', cursive;
+    font-size: 40px;
+    float: left;
+    width: 400px;
+    height: 50px;
+    border-right: solid black 3px;
+    background-image: "../../images/BGSideFrame.png";
+    background-size: 70px;
+    padding: 15px 0px; }
+
 .circle-container {
   position: relative;
   width: 20em;
@@ -7,7 +35,7 @@
   list-style: none;
   float: left;
   margin: 6em;
-  border: solid 10px tomato; }
+  border: solid 10px #092049; }
   .circle-container > * {
     display: block;
     position: absolute;
@@ -85,17 +113,10 @@
       -moz-filter: grayscale(50);
       -o-filter: grayscale(50);
       filter: grayscale(50); }
-    -webkit-filter:
 
 body {
-  background-image: url("../images/backgroundPic.png");
+  background-image: url("../../images/backgroundPic.png");
   background-size: cover;
   resize: horizontal; }
-
-header div {
-  width: 95%;
-  height: 40px;
-  background-image: url("../images/BGSideFrame.png"); }
-
 
 /*# sourceMappingURL=stylesheet.css.map */

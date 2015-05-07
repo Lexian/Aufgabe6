@@ -1,0 +1,22 @@
+@import "../mixin";
+
+.circle-container {
+  @include on-circle($item-count: 8, $circle-size: 20em, $item-size: 10em);
+  float: left;
+  margin: 6em;
+  border: solid 10px #092049;
+
+  img {
+    @include vendor-prefix(transition, .3s);
+    display: block;
+    max-width: 60%;
+    border-radius: 50%;
+    @include vendor-prefix(filter, (grayscale(0)));
+    border: solid 5px tomato;
+
+    &:hover,
+    &:active {
+      @include vendor-prefix(filter,grayscale(50));
+    }
+  }
+}

@@ -1,0 +1,41 @@
+/*Urls für BDesigns*/
+$backgroundImageHtml : "../../images/backgroundPic.png";
+$BGImageNav:"../../images/BGSideFrame.png";
+$BackgroundImageContent:"";
+
+
+/* navBar items*/
+$item:"nav-item";
+$item1Lbl:"Home";
+$item2Lbl:"Helden";
+
+$item1LblSub1:"Home";
+$item1LblSub2:"AGB'S";
+$item1LblSub3:"Impressum";
+
+
+$item2LblSub1:"Unsere Helden";
+$item2LblSub2:"Kontakt";
+
+ /*navBar attribs*/
+
+$itemImageColorActive: darken(cornflowerblue, 50%);
+$itemImageColorDeactived: darken(cornflowerblue, 0%);
+
+
+
+$mainSizeWidth:100%;
+$mainSizeHeight:70px;
+$mainColorBG: $itemImageColorDeactived;
+$mainColorFG: $itemImageColorActive;
+
+/*Fonts*/
+@import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
+
+
+
+
+
+
+
+
