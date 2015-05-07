@@ -17,6 +17,8 @@
     &:hover,
     &:active {
       @include vendor-prefix(filter,grayscale(50));
+      background: darken(gray,0%);
+      opacity: 0.6;
     }
   }
 }
