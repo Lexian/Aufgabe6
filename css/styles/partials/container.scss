@@ -4,21 +4,23 @@
   @include on-circle($item-count: 8, $circle-size: 20em, $item-size: 10em);
   float: left;
   margin: 6em;
-  border: solid 10px #092049;
+  border: double 10px #4d85ea;
+  position: fixed;
 
   img {
     @include vendor-prefix(transition, .3s);
     display: block;
     max-width: 60%;
     border-radius: 50%;
-    @include vendor-prefix(filter, (grayscale(0)));
-    border: solid 5px tomato;
+    //@include vendor-prefix(filter, (grayscale(0)));
+    border: dashed 5px tomato;
+    background: darken(gray,60%);
+    opacity: 0.6;
 
     &:hover,
     &:active {
-      @include vendor-prefix(filter,grayscale(50));
-      background: darken(gray,0%);
-      opacity: 0.6;
+      background: darken(gray,60%);
+      opacity: 1;
     }
   }
 }

@@ -2,16 +2,21 @@
 @import "../placeholders";
 
 
+
+
+
 .nav-main{
   width: 100%;
-  background-color: $mainColorBG;
+  background-color: cornflowerblue ;
+
   height: 70px;
   color: $mainColorFG;
   border: solid darken(cornflowerblue,5%) 3px;
 
   .Logo{
+
     float: left;
-    width: 420px;
+    width: 28%;
     height: 48px;
     border: inset darken(cornflowerblue,5%) 8.5px;
     background-image: url($BGImageNav);
@@ -33,6 +38,7 @@
    >ul{
     @extend %plainlist;
       float: right;
+     width: 38%;
      margin-right: 3px;
 
         >li{
@@ -43,6 +49,7 @@
 }
 .nav-item{
   display: inline-block;
+  position: static;
   height: 35px;
   line-height: 40px;
 
@@ -58,4 +65,15 @@
   &:hover{
     opacity: 0.7;
   }
+}
+.ticker{
+  float: left;
+  width: 28%;
+  height: 53px;
+
+  border: inset darken(cornflowerblue,5%) 8.5px;
+
+  background-image: $tickerBG;
+  background-size: cover;
+
 }

@@ -8,9 +8,9 @@
 
 
 
-body{
+body, html{
 
-  background-image: url($backgroundImageHtml);
   background-size: cover;
-  resize: horizontal ;
+  background: url($backgroundImageHtml) no-repeat;
+  position: relative;
 }

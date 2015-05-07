@@ -25,12 +25,17 @@ $itemImageColorDeactived: darken(cornflowerblue, 0%);
 
 
 $mainSizeWidth:100%;
-$mainSizeHeight:70px;
+$mainSizeHeight:4.375em;
 $mainColorBG: $itemImageColorDeactived;
 $mainColorFG: $itemImageColorActive;
+$tickerBG: url(../../images/headBackground.png);
 
 /*Fonts*/
 @import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
+
+@function em($px) {
+  @return ($px / $base) * 1em;
+}
 
 
 
