@@ -1,3 +1,5 @@
+//@import "../../bourbon/bourbon";
+
 @mixin vendor-prefix($name, $argument) {
   -webkit-#{$name}: #{$argument};
   -ms-#{$name}: #{$argument};
@@ -28,7 +30,8 @@
 
     @for $i from 1 through $item-count {
       &:nth-of-type(#{$i}) {
-        @include vendor-prefix(transform, rotate($rot *1deg) translate($circle-size /2) rotate($rot * -1deg));
+        @include transform ( rotate($rot *1deg) translate($circle-size /2) rotate($rot * -1deg));
+
 
       }
 

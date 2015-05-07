@@ -1,79 +1,46 @@
 @import "../variables";
 @import "../placeholders";
+@import "../../../bourbon/bourbon";
+@import "../mixin";
 
 
 
 
 
 .nav-main{
-  width: 100%;
-  background-color: cornflowerblue ;
+    width: 100%;
+    height: 70px;
+    color: antiquewhite;
 
-  height: 70px;
-  color: $mainColorFG;
-  border: solid darken(cornflowerblue,5%) 3px;
-
-  .Logo{
-
+  .logo {
     float: left;
-    width: 28%;
-    height: 48px;
-    border: inset darken(cornflowerblue,5%) 8.5px;
-    background-image: url($BGImageNav);
-    background-size: 28px ,cover;
-    font-family: 'Shojumaru', cursive;
-    font-size: 40px;
-    padding-bottom: 5px ;
-    padding-left: 9px;
-    margin-bottom: 2px;
+    height: 40px;
+    padding: 15px 30px;
+    font-size: 1.4em;
     line-height: 40px;
+    border-right: inset;
+  }
+    >ul{
+      display: inline;
 
-    >a {
-
-      color: darken(cornflowerblue,45%);
-
+      float: left;
+      >li{
+        @extend %plainlist;
+        float: left;
+      }
     }
 
-  }
-   >ul{
-    @extend %plainlist;
-      float: right;
-     width: 38%;
-     margin-right: 3px;
-
-        >li{
-         float: left;
-     }
-   }
 
 }
-.nav-item{
-  display: inline-block;
-  position: static;
-  height: 35px;
-  line-height: 40px;
 
-  border: inset darken(cornflowerblue,5%) 8.5px;
-  background-image: url($BGImageNav);
-  background-size: 25px ,cover;
-  font-family: 'Shojumaru', cursive;
-  font-size: 40px;
 
-  padding: 15px 20px 5px 9px;
-  margin-bottom: 2px;
 
-  &:hover{
-    opacity: 0.7;
-  }
+@media only screen and (max-width: 320px) {
+
+  body { font-size: 2em; }
+
 }
-.ticker{
-  float: left;
-  width: 28%;
-  height: 53px;
 
-  border: inset darken(cornflowerblue,5%) 8.5px;
-
-  background-image: $tickerBG;
-  background-size: cover;
-
+.circle-div {
+  height: 40px;
 }

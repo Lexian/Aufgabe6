@@ -19,16 +19,21 @@ $item2LblSub2:"Kontakt";
 
  /*navBar attribs*/
 
-$itemImageColorActive: darken(cornflowerblue, 50%);
-$itemImageColorDeactived: darken(cornflowerblue, 0%);
 
-
+$imageMax:" max-height:20em";
 
 $mainSizeWidth:100%;
 $mainSizeHeight:4.375em;
-$mainColorBG: $itemImageColorDeactived;
-$mainColorFG: $itemImageColorActive;
-$tickerBG: url(../../images/headBackground.png);
+
+
+/* Slide Menubar*/
+$li: 9; /* [1] */
+$icon-size: 150px; /* [2] */
+$menu-size: 300px / 2; /* [3] */
+$unit-size: 45px;  /* [4] */
+$menu-position: (($menu-size * 2) - $icon-size) / -2;
+$offset: 100px; /* [5] */
+$deg: 360deg / $li; /* [6] */
 
 /*Fonts*/
 @import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);

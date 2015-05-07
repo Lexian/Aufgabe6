@@ -1,7 +1,9 @@
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
-.nav-main > ul {
+@import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
+.nav-main > ul > li {
   margin: 0;
   padding: 0;
   list-style-type: none; }
@@ -9,67 +11,64 @@
 /*Urls für BDesigns*/
 /* navBar items*/
 /*navBar attribs*/
+/* Slide Menubar*/
+/* [1] */
+/* [2] */
+/* [3] */
+/* [4] */
+/* [5] */
+/* [6] */
 /*Fonts*/
 /*Urls für BDesigns*/
 /* navBar items*/
 /*navBar attribs*/
+/* Slide Menubar*/
+/* [1] */
+/* [2] */
+/* [3] */
+/* [4] */
+/* [5] */
+/* [6] */
 /*Fonts*/
-.nav-main > ul {
+.nav-main > ul > li {
   margin: 0;
   padding: 0;
   list-style-type: none; }
 
 .nav-main {
   width: 100%;
-  background-color: cornflowerblue;
   height: 70px;
-  color: #092049;
-  border: solid #4d85ea 3px; }
-  .nav-main .Logo {
+  color: antiquewhite; }
+  .nav-main .logo {
     float: left;
-    width: 28%;
-    height: 48px;
-    border: inset #4d85ea 8.5px;
-    background-image: url("../../images/navBtnGrid.png");
-    background-size: 28px ,cover;
-    font-family: 'Shojumaru', cursive;
-    font-size: 40px;
-    padding-bottom: 5px;
-    padding-left: 9px;
-    margin-bottom: 2px;
-    line-height: 40px; }
-    .nav-main .Logo > a {
-      color: #0b2a60; }
+    height: 40px;
+    padding: 15px 30px;
+    font-size: 1.4em;
+    line-height: 40px;
+    border-right: inset; }
   .nav-main > ul {
-    float: right;
-    width: 38%;
-    margin-right: 3px; }
+    display: inline;
+    float: left; }
     .nav-main > ul > li {
       float: left; }
 
-.nav-item {
-  display: inline-block;
-  position: static;
-  height: 35px;
-  line-height: 40px;
-  border: inset #4d85ea 8.5px;
-  background-image: url("../../images/navBtnGrid.png");
-  background-size: 25px ,cover;
-  font-family: 'Shojumaru', cursive;
-  font-size: 40px;
-  padding: 15px 20px 5px 9px;
-  margin-bottom: 2px; }
-  .nav-item:hover {
-    opacity: 0.7; }
+@media only screen and (max-width: 320px) {
+  body {
+    font-size: 2em; } }
+.circle-div {
+  height: 40px; }
 
-.ticker {
-  float: left;
-  width: 28%;
-  height: 53px;
-  border: inset #4d85ea 8.5px;
-  background-image: url(../../images/headBackground.png);
-  background-size: cover; }
-
+/*Urls für BDesigns*/
+/* navBar items*/
+/*navBar attribs*/
+/* Slide Menubar*/
+/* [1] */
+/* [2] */
+/* [3] */
+/* [4] */
+/* [5] */
+/* [6] */
+/*Fonts*/
 .circle-container {
   position: relative;
   width: 20em;
@@ -91,71 +90,231 @@
     margin: -3.33333em; }
     .circle-container > *:nth-of-type(1) {
       -webkit-transform: rotate(15deg) translate(10em) rotate(-15deg);
-      -ms-transform: rotate(15deg) translate(10em) rotate(-15deg);
       -moz-transform: rotate(15deg) translate(10em) rotate(-15deg);
+      -ms-transform: rotate(15deg) translate(10em) rotate(-15deg);
       -o-transform: rotate(15deg) translate(10em) rotate(-15deg);
       transform: rotate(15deg) translate(10em) rotate(-15deg); }
     .circle-container > *:nth-of-type(2) {
       -webkit-transform: rotate(60deg) translate(10em) rotate(-60deg);
-      -ms-transform: rotate(60deg) translate(10em) rotate(-60deg);
       -moz-transform: rotate(60deg) translate(10em) rotate(-60deg);
+      -ms-transform: rotate(60deg) translate(10em) rotate(-60deg);
       -o-transform: rotate(60deg) translate(10em) rotate(-60deg);
       transform: rotate(60deg) translate(10em) rotate(-60deg); }
     .circle-container > *:nth-of-type(3) {
       -webkit-transform: rotate(105deg) translate(10em) rotate(-105deg);
-      -ms-transform: rotate(105deg) translate(10em) rotate(-105deg);
       -moz-transform: rotate(105deg) translate(10em) rotate(-105deg);
+      -ms-transform: rotate(105deg) translate(10em) rotate(-105deg);
       -o-transform: rotate(105deg) translate(10em) rotate(-105deg);
       transform: rotate(105deg) translate(10em) rotate(-105deg); }
     .circle-container > *:nth-of-type(4) {
       -webkit-transform: rotate(150deg) translate(10em) rotate(-150deg);
-      -ms-transform: rotate(150deg) translate(10em) rotate(-150deg);
       -moz-transform: rotate(150deg) translate(10em) rotate(-150deg);
+      -ms-transform: rotate(150deg) translate(10em) rotate(-150deg);
       -o-transform: rotate(150deg) translate(10em) rotate(-150deg);
       transform: rotate(150deg) translate(10em) rotate(-150deg); }
     .circle-container > *:nth-of-type(5) {
       -webkit-transform: rotate(195deg) translate(10em) rotate(-195deg);
-      -ms-transform: rotate(195deg) translate(10em) rotate(-195deg);
       -moz-transform: rotate(195deg) translate(10em) rotate(-195deg);
+      -ms-transform: rotate(195deg) translate(10em) rotate(-195deg);
       -o-transform: rotate(195deg) translate(10em) rotate(-195deg);
       transform: rotate(195deg) translate(10em) rotate(-195deg); }
     .circle-container > *:nth-of-type(6) {
       -webkit-transform: rotate(240deg) translate(10em) rotate(-240deg);
-      -ms-transform: rotate(240deg) translate(10em) rotate(-240deg);
       -moz-transform: rotate(240deg) translate(10em) rotate(-240deg);
+      -ms-transform: rotate(240deg) translate(10em) rotate(-240deg);
       -o-transform: rotate(240deg) translate(10em) rotate(-240deg);
       transform: rotate(240deg) translate(10em) rotate(-240deg); }
     .circle-container > *:nth-of-type(7) {
       -webkit-transform: rotate(285deg) translate(10em) rotate(-285deg);
-      -ms-transform: rotate(285deg) translate(10em) rotate(-285deg);
       -moz-transform: rotate(285deg) translate(10em) rotate(-285deg);
+      -ms-transform: rotate(285deg) translate(10em) rotate(-285deg);
       -o-transform: rotate(285deg) translate(10em) rotate(-285deg);
       transform: rotate(285deg) translate(10em) rotate(-285deg); }
     .circle-container > *:nth-of-type(8) {
       -webkit-transform: rotate(330deg) translate(10em) rotate(-330deg);
-      -ms-transform: rotate(330deg) translate(10em) rotate(-330deg);
       -moz-transform: rotate(330deg) translate(10em) rotate(-330deg);
+      -ms-transform: rotate(330deg) translate(10em) rotate(-330deg);
       -o-transform: rotate(330deg) translate(10em) rotate(-330deg);
       transform: rotate(330deg) translate(10em) rotate(-330deg); }
   .circle-container img {
-    -webkit-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
+    transition: all  .3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
     display: block;
     max-width: 60%;
     border-radius: 50%;
-    border: dashed 5px tomato;
-    background: black;
-    opacity: 0.6; }
+    filter: grayscale(0);
+    -webkit-filter: grayscale(40%);
+    filter: grayscale(40%);
+    border: dashed 5px tomato; }
     .circle-container img:hover, .circle-container img:active {
-      background: black;
-      opacity: 1; }
+      filter: grayscale(0);
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+      transition: " max-height:20em" 1s ease-out;
+      -webkit-transition: 10.3em 0.15s ease-out;
+      -moz-transition: 10.3em 0.15s ease-out;
+      transition: 10.3em 0.15s ease-out; }
 
-body, html {
-  background-size: cover;
-  background: url("../../images/backgroundPic.png") no-repeat;
-  position: relative; }
+/*Urls für BDesigns*/
+/* navBar items*/
+/*navBar attribs*/
+/* Slide Menubar*/
+/* [1] */
+/* [2] */
+/* [3] */
+/* [4] */
+/* [5] */
+/* [6] */
+/*Fonts*/
+.icon {
+  position: relative;
+  background: white;
+  cursor: pointer;
+  margin: auto;
+  color: deepskyblue;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  line-height: 150px;
+  text-align: center;
+  font-size: 2.75em;
+  font-weight: bold;
+  transition: 0.24s 0.2s; }
+
+.icon:hover {
+  background: rgba(255, 255, 255, 0.75); }
+
+.menu {
+  list-style-type: none;
+  position: absolute;
+  top: -75px;
+  left: -75px;
+  border: 150px solid transparent;
+  cursor: default;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 1.4s 0.07s;
+  z-index: -5; }
+
+.spread {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  transform-origin: 100px 100px;
+  transition: all 0.5s 0.1s; }
+
+.icon:hover {
+  /* Where all the MAGIC happens: */ }
+  .icon:hover .menu {
+    transition: transform 0.4s 0.08s, z-index   0s  0.5s;
+    transform: scale(1);
+    z-index: 5; }
+  .icon:hover .spread, .icon:hover .unit {
+    transition: all 0.6s; }
+  .icon:hover .spread:nth-child(1) {
+    transition-delay: 0.02s;
+    transform: rotate(85deg); }
+    .icon:hover .spread:nth-child(1) .unit {
+      transition-delay: 0.04s;
+      transform: rotate(635deg); }
+  .icon:hover .spread:nth-child(2) {
+    transition-delay: 0.04s;
+    transform: rotate(125deg); }
+    .icon:hover .spread:nth-child(2) .unit {
+      transition-delay: 0.08s;
+      transform: rotate(595deg); }
+  .icon:hover .spread:nth-child(3) {
+    transition-delay: 0.06s;
+    transform: rotate(165deg); }
+    .icon:hover .spread:nth-child(3) .unit {
+      transition-delay: 0.12s;
+      transform: rotate(555deg); }
+  .icon:hover .spread:nth-child(4) {
+    transition-delay: 0.08s;
+    transform: rotate(205deg); }
+    .icon:hover .spread:nth-child(4) .unit {
+      transition-delay: 0.16s;
+      transform: rotate(515deg); }
+  .icon:hover .spread:nth-child(5) {
+    transition-delay: 0.1s;
+    transform: rotate(245deg); }
+    .icon:hover .spread:nth-child(5) .unit {
+      transition-delay: 0.2s;
+      transform: rotate(475deg); }
+  .icon:hover .spread:nth-child(6) {
+    transition-delay: 0.12s;
+    transform: rotate(285deg); }
+    .icon:hover .spread:nth-child(6) .unit {
+      transition-delay: 0.24s;
+      transform: rotate(435deg); }
+  .icon:hover .spread:nth-child(7) {
+    transition-delay: 0.14s;
+    transform: rotate(325deg); }
+    .icon:hover .spread:nth-child(7) .unit {
+      transition-delay: 0.28s;
+      transform: rotate(395deg); }
+  .icon:hover .spread:nth-child(8) {
+    transition-delay: 0.16s;
+    transform: rotate(365deg); }
+    .icon:hover .spread:nth-child(8) .unit {
+      transition-delay: 0.32s;
+      transform: rotate(355deg); }
+  .icon:hover .spread:nth-child(9) {
+    transition-delay: 0.18s;
+    transform: rotate(405deg); }
+    .icon:hover .spread:nth-child(9) .unit {
+      transition-delay: 0.36s;
+      transform: rotate(315deg); }
+
+/* END .icon:hover */
+.unit {
+  position: absolute;
+  background: white;
+  font-size: 60%;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: dodgerblue;
+  border-radius: 50%;
+  transition: 0.6s; }
+
+.icon {
+  top: 50%;
+  margin-top: 5em;
+  margin-right: 3em; }
+
+.secMenu {
+  float: right; }
+
+body, a, ul, li {
+  display: flex;
+  float: left;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  list-style: none; }
+
+html, body {
+  height: 100%;
+  min-height: 300px; }
+
+body {
+  font-family: sans-serif;
+  background-image: url("../../images/backgroundPic.png");
+  transform: translate3d(0, 0, 0); }
+
+footer {
+  clear: left;
+  margin-top: 1em;
+  background: #efefef;
+  text-align: center;
+  padding: 10px; }
+
+header {
+  background-color: #222222;
+  margin: 1.5em 0.5em; }
 
 /*# sourceMappingURL=stylesheet.css.map */

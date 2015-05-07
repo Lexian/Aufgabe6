@@ -1,6 +1,10 @@
 @import "../mixin";
+@import "../../../bourbon/bourbon";
+@import "../variables";
+
 
 .circle-container {
+
   @include on-circle($item-count: 8, $circle-size: 20em, $item-size: 10em);
   float: left;
   margin: 6em;
@@ -8,19 +12,28 @@
   position: fixed;
 
   img {
-    @include vendor-prefix(transition, .3s);
+    transition: all  .3s ease-in;
+    @include transition(all .3s ease-in);
     display: block;
     max-width: 60%;
     border-radius: 50%;
-    //@include vendor-prefix(filter, (grayscale(0)));
+    filter: grayscale(0);
+    @include filter(grayscale(40%));
+    //filter gray;
     border: dashed 5px tomato;
-    background: darken(gray,60%);
-    opacity: 0.6;
+    //background: darken(gray,60%);
+    //opacity: 0.6;
 
     &:hover,
     &:active {
-      background: darken(gray,60%);
-      opacity: 1;
+      //background: darken(gray,60%);
+      //opacity: 1;
+      filter: grayscale(0);
+      @include filter(grayscale(0));
+      transition: $imageMax 1s ease-out;
+      @include transition(10.3em .15s ease-out);
+
+
     }
   }
 }
