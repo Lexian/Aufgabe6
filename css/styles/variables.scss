@@ -27,7 +27,7 @@ $mainSizeHeight:4.375em;
 
 
 /* Slide Menubar*/
-$li: 9; /* [1] */
+$li: 8; /* [1] */
 $icon-size: 150px; /* [2] */
 $menu-size: 300px / 2; /* [3] */
 $unit-size: 45px;  /* [4] */
@@ -37,10 +37,9 @@ $deg: 360deg / $li; /* [6] */
 
 /*Fonts*/
 @import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
+$Font-Shoju : "Shojumaru", cursive;
 
-@function em($px) {
-  @return ($px / $base) * 1em;
-}
+
 
 
 

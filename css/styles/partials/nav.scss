@@ -19,14 +19,28 @@
     font-size: 1.4em;
     line-height: 40px;
     border-right: inset;
+    border-radius: 15em;
   }
     >ul{
-      display: inline;
 
-      float: left;
+      height: 70px;
+      font-family: "Shojumaru", cursive;
+
+
+      //float: left;
       >li{
-        @extend %plainlist;
+        @extend %plainList;
+        font-size: large;
+        line-height: 50px;
         float: left;
+        border-right: inset;
+        border-radius: 15em;
+        height: 70px;
+        margin: 0px 0.5em;
+
+        >a{
+          style:none;
+        }
       }
     }
 
@@ -34,13 +48,7 @@
 }
 
 
-
-@media only screen and (max-width: 320px) {
-
-  body { font-size: 2em; }
-
-}
-
 .circle-div {
   height: 40px;
+
 }

@@ -1,12 +1,6 @@
 //@import "../../bourbon/bourbon";
 
-@mixin vendor-prefix($name, $argument) {
-  -webkit-#{$name}: #{$argument};
-  -ms-#{$name}: #{$argument};
-  -moz-#{$name}: #{$argument};
-  -o-#{$name}: #{$argument};
-  #{$name}: #{$argument};
-}
+
 
 @mixin on-circle($item-count, $circle-size, $item-size) {
   position: relative;
@@ -14,6 +8,7 @@
   height: $circle-size;
   padding: 0;
   border-radius: 50%;
+
   list-style: none;
 
   > * {
@@ -30,6 +25,7 @@
 
     @for $i from 1 through $item-count {
       &:nth-of-type(#{$i}) {
+        transform: rotate($rot *1deg), translate($circle-size /2) rotate($rot * -1deg);
         @include transform ( rotate($rot *1deg) translate($circle-size /2) rotate($rot * -1deg));
 
 

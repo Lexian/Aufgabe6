@@ -6,19 +6,18 @@
 .circle-container {
 
   @include on-circle($item-count: 8, $circle-size: 20em, $item-size: 10em);
-  float: left;
+  float: right;
   margin: 6em;
-  border: double 10px #4d85ea;
-  position: fixed;
-
+  border: groove 10px #4d85ea;
+  background-color: #0b2a60;
   img {
     transition: all  .3s ease-in;
     @include transition(all .3s ease-in);
-    display: block;
+    //display: block;
     max-width: 60%;
     border-radius: 50%;
-    filter: grayscale(0);
-    @include filter(grayscale(40%));
+    filter: grayscale(60);
+    @include filter(grayscale(60%));
     //filter gray;
     border: dashed 5px tomato;
     //background: darken(gray,60%);
@@ -30,6 +29,7 @@
       //opacity: 1;
       filter: grayscale(0);
       @include filter(grayscale(0));
+
       transition: $imageMax 1s ease-out;
       @include transition(10.3em .15s ease-out);
 
