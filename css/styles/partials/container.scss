@@ -6,10 +6,14 @@
 .circle-container {
 
   @include on-circle($item-count: 8, $circle-size: 20em, $item-size: 10em);
+
   float: right;
   margin: 6em;
   border: groove 10px #4d85ea;
   background-color: #0b2a60;
+  color: antiquewhite;
+  font-family: cursive;
+
   img {
     transition: all  .3s ease-in;
     @include transition(all .3s ease-in);

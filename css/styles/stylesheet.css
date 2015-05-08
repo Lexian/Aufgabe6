@@ -3,11 +3,6 @@
 @import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
-.nav-main > ul > li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
-
 /*Urls für BDesigns*/
 /* navBar items*/
 /*navBar attribs*/
@@ -30,39 +25,73 @@
 /* [5] */
 /* [6] */
 /*Fonts*/
-.nav-main > ul > li {
-  margin: 0;
+.logo {
+  float: right;
+  height: 40px;
+  padding: 15px 30px;
+  font-size: 1.4em;
+  line-height: 40px;
+  border-left: inset 13px;
+  border-right: inset 13px;
+  border-radius: 15em; }
+
+nav ul ul {
+  display: none; }
+
+nav ul li:hover > ul {
+  display: block; }
+
+nav ul {
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
+  padding: 0 20px;
+  border-radius: 10px;
+  list-style: none;
+  position: relative;
+  display: inline-table; }
+
+nav ul:after {
+  content: "";
+  clear: both;
+  display: block; }
+
+nav ul li {
+  border-right: inset;
+  border-radius: 15em;
+  float: left; }
+
+nav ul li:hover a {
+  color: #fff; }
+
+nav ul li a {
+  display: block;
+  padding: 25px 40px;
+  color: #757575;
+  text-decoration: none; }
+
+nav ul ul {
+  background: #5f6975;
+  border-radius: 0px;
   padding: 0;
-  list-style-type: none; }
+  position: absolute;
+  top: 100%; }
 
-.nav-main {
-  width: 100%;
-  height: 70px;
-  color: antiquewhite; }
-  .nav-main .logo {
-    float: left;
-    height: 40px;
-    padding: 15px 30px;
-    font-size: 1.4em;
-    line-height: 40px;
-    border-right: inset;
-    border-radius: 15em; }
-  .nav-main > ul {
-    height: 70px;
-    font-family: "Shojumaru", cursive; }
-    .nav-main > ul > li {
-      font-size: large;
-      line-height: 50px;
-      float: left;
-      border-right: inset;
-      border-radius: 15em;
-      height: 70px;
-      margin: 0px 0.5em; }
-      .nav-main > ul > li > a {
-        style: none; }
+nav ul ul li {
+  float: none;
+  border-top: 1px solid #6b727c;
+  border-bottom: 1px solid #575f6a;
+  position: relative; }
 
-.circle-div {
-  height: 40px; }
+nav ul ul li a {
+  padding: 15px 40px;
+  color: #fff; }
+
+nav ul ul li a:hover {
+  background: #4b545f; }
+
+nav ul ul ul {
+  position: absolute;
+  left: 100%;
+  top: 0; }
 
 /*Urls für BDesigns*/
 /* navBar items*/
@@ -85,7 +114,9 @@
   float: right;
   margin: 6em;
   border: groove 10px #4d85ea;
-  background-color: #0b2a60; }
+  background-color: #0b2a60;
+  color: antiquewhite;
+  font-family: cursive; }
   .circle-container > * {
     display: block;
     position: absolute;
@@ -430,12 +461,13 @@ body {
 header {
   display: block;
   background-color: #222222;
+  opacity: 0.5;
   margin: 1.5em 0.5em;
   border-radius: 15em; }
 
 .content {
   position: fixed;
-  top: 30%;
+  top: 20%;
   left: 30%;
   display: inline-block;
   overflow: auto;
@@ -447,7 +479,11 @@ header {
   height: 40em;
   font-family: "Shojumaru", cursive; }
 
+h3 {
+  text-align: center; }
+
 .pContent {
+  padding: 0px 1px;
   width: 40em;
   white-space: pre-wrap; }
 

@@ -34,12 +34,13 @@ body {
 header{
   display: block;
   background-color: #222222;
+  opacity: 0.5;
   margin: 1.5em 0.5em;
   border-radius: 15em;
 }
 .content{
    position: fixed;
-  top: 30%;
+  top: 20%;
   left: 30%;
   display: inline-block;
   overflow: auto;
@@ -53,11 +54,22 @@ header{
   font-family: $Font-Shoju;
 }
 
+h1{
 
+}
+
+H2{
+
+}
+
+h3 {
+  text-align: center;
+}
 
 
 
 .pContent {
+  padding: 0px 1px;
   width: 40em;
   white-space: pre-wrap;
 
