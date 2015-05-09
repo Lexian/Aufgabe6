@@ -8,11 +8,10 @@
   height: $circle-size;
   padding: 0;
   border-radius: 50%;
-
   list-style: none;
 
   > * {
-    display: block;
+    //display: block;
     position: absolute;
     top:  50%;
     left: 50%;

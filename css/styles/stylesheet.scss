@@ -13,13 +13,27 @@ body, a, ul, li {
   margin: 0;
   outline: 0;
   padding: 0;
+
   list-style: none
 
+}
+
+section{
+  float: left;
+  width: 44%;
+  padding: 10px 15px;
+  height: 70%;
+  border-right: inset;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-image: url("../../images/BG_Content.png");
 }
 
 html, body {
   height: 100%;
   min-height: $menu-size*2;
+  min-width: $menu-size+5;
+  max-width: 100%;
 
 }
 
@@ -27,8 +41,7 @@ body {
   font-family: sans-serif;
   background-image: url("../../images/backgroundPic.png");
   background-size: cover;
-  border-radius: 15em;
-  transform: translate3d(0, 0, 0)
+  //transform: translate3d(0, 0, 0)
 }
 
 header{
@@ -38,45 +51,33 @@ header{
   margin: 1.5em 0.5em;
   border-radius: 15em;
 }
-.content{
-   position: fixed;
-  top: 20%;
-  left: 30%;
-  display: inline-block;
-  overflow: auto;
-  overflow-y: scroll;
-  border:groove 0.2em;
-  word-wrap:break-word;
-  width: 40em;
-  max-width: 40em;
-  height: 40em;
 
-  font-family: $Font-Shoju;
-}
 
 h1{
 
 }
 
-H2{
-
+h2{
+  text-align: center;
+  //@include
 }
 
 h3 {
+  width: 100%;
   text-align: center;
+  font-family: $Font-Josefin;
+  font-size: larger;
 }
 
 
 
-.pContent {
-  padding: 0px 1px;
-  width: 40em;
-  white-space: pre-wrap;
 
-}
 aside{
 float: right;
-  margin-left: em(50);
+  padding: 0em 1em;
+
+;
+
 }
 footer{
   position: fixed;
@@ -89,5 +90,15 @@ footer{
   margin: 0% 0.4%;
   opacity: 0.3;
   border-radius: 15em;
+
+}
+
+.leftBox-body {
+  float: left;
+  top: 20%;
+  left: 1%;
+  width: 20%;
+  padding: 10px 10px;
+  border-left: none;
 
 }

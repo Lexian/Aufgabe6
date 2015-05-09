@@ -1,8 +1,32 @@
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Playball&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
+@import url(http://fonts.googleapis.com/css?family=Fira+Mono&subset=latin,cyrillic,greek,latin-ext,cyrillic-ext);
 @import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Playball&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
+@import url(http://fonts.googleapis.com/css?family=Fira+Mono&subset=latin,cyrillic,greek,latin-ext,cyrillic-ext);
 @import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Playball&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
+@import url(http://fonts.googleapis.com/css?family=Fira+Mono&subset=latin,cyrillic,greek,latin-ext,cyrillic-ext);
 @import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Playball&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
+@import url(http://fonts.googleapis.com/css?family=Fira+Mono&subset=latin,cyrillic,greek,latin-ext,cyrillic-ext);
 /*Urls für BDesigns*/
 /* navBar items*/
 /*navBar attribs*/
@@ -29,11 +53,14 @@
   float: right;
   height: 40px;
   padding: 15px 30px;
-  font-size: 1.4em;
+  font-size: 2em;
+  font-family: "Playball", cursive;
+  color: #4294f0;
   line-height: 40px;
   border-left: inset 13px;
   border-right: inset 13px;
-  border-radius: 15em; }
+  border-radius: 15em;
+  margin-right: 2em; }
 
 nav ul ul {
   display: none; }
@@ -112,13 +139,12 @@ nav ul ul ul {
   border-radius: 50%;
   list-style: none;
   float: right;
-  margin: 6em;
+  margin: 7em;
   border: groove 10px #4d85ea;
   background-color: #0b2a60;
   color: antiquewhite;
   font-family: cursive; }
   .circle-container > * {
-    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -182,10 +208,10 @@ nav ul ul ul {
       -o-transform: rotate(330deg) translate(10em) rotate(-330deg);
       transform: rotate(330deg) translate(10em) rotate(-330deg); }
   .circle-container img {
-    transition: all  .3s ease-in;
-    -webkit-transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in;
-    transition: all 0.3s ease-in;
+    transition: all  .5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
     max-width: 60%;
     border-radius: 50%;
     filter: grayscale(60);
@@ -196,10 +222,10 @@ nav ul ul ul {
       filter: grayscale(0);
       -webkit-filter: grayscale(0);
       filter: grayscale(0);
-      transition: " max-height:20em" 1s ease-out;
-      -webkit-transition: 10.3em 0.15s ease-out;
-      -moz-transition: 10.3em 0.15s ease-out;
-      transition: 10.3em 0.15s ease-out; }
+      transition: all .4s ease_out;
+      -webkit-transition: all 0.4s ease-out;
+      -moz-transition: all 0.4s ease-out;
+      transition: all 0.4s ease-out; }
 
 /*Urls für BDesigns*/
 /* navBar items*/
@@ -218,9 +244,9 @@ nav ul ul ul {
   margin: auto;
   color: deepskyblue;
   border-radius: 50%;
-  height: 150px;
-  width: 150px;
-  line-height: 150px;
+  height: 290px;
+  width: 290px;
+  line-height: 290px;
   text-align: center;
   font-size: 2.75em;
   font-weight: bold;
@@ -238,8 +264,8 @@ nav ul ul ul {
 .menu {
   list-style-type: none;
   position: absolute;
-  top: -75px;
-  left: -75px;
+  top: -5px;
+  left: -5px;
   border: 150px solid transparent;
   cursor: default;
   border-radius: 50%;
@@ -254,14 +280,14 @@ nav ul ul ul {
 
 .spread {
   position: absolute;
-  top: -100px;
-  left: -100px;
-  transform-origin: 100px 100px;
-  -webkit-transform-origin: 100px 100px;
-  -moz-transform-origin: 100px 100px;
-  -ms-transform-origin: 100px 100px;
-  -o-transform-origin: 100px 100px;
-  transform-origin: 100px 100px;
+  top: -185px;
+  left: -185px;
+  transform-origin: 185px 185px;
+  -webkit-transform-origin: 185px 185px;
+  -moz-transform-origin: 185px 185px;
+  -ms-transform-origin: 185px 185px;
+  -o-transform-origin: 185px 185px;
+  transform-origin: 185px 185px;
   transition: all 0.5s 0.1s;
   -webkit-transition: all 0.5s 0.1s;
   -moz-transition: all 0.5s 0.1s;
@@ -421,9 +447,9 @@ nav ul ul ul {
   background: white;
   font-size: 70%;
   text-decoration: none;
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
   color: dodgerblue;
   border-radius: 50%;
   transition: 0.6s; }
@@ -447,16 +473,26 @@ body, a, ul, li {
   padding: 0;
   list-style: none; }
 
+section {
+  float: left;
+  width: 44%;
+  padding: 10px 15px;
+  height: 70%;
+  border-right: inset;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-image: url("../../images/BG_Content.png"); }
+
 html, body {
   height: 100%;
-  min-height: 300px; }
+  min-height: 300px;
+  min-width: 155px;
+  max-width: 100%; }
 
 body {
   font-family: sans-serif;
   background-image: url("../../images/backgroundPic.png");
-  background-size: cover;
-  border-radius: 15em;
-  transform: translate3d(0, 0, 0); }
+  background-size: cover; }
 
 header {
   display: block;
@@ -465,31 +501,18 @@ header {
   margin: 1.5em 0.5em;
   border-radius: 15em; }
 
-.content {
-  position: fixed;
-  top: 20%;
-  left: 30%;
-  display: inline-block;
-  overflow: auto;
-  overflow-y: scroll;
-  border: groove 0.2em;
-  word-wrap: break-word;
-  width: 40em;
-  max-width: 40em;
-  height: 40em;
-  font-family: "Shojumaru", cursive; }
-
-h3 {
+h2 {
   text-align: center; }
 
-.pContent {
-  padding: 0px 1px;
-  width: 40em;
-  white-space: pre-wrap; }
+h3 {
+  width: 100%;
+  text-align: center;
+  font-family: "Josefin", serif;
+  font-size: larger; }
 
 aside {
   float: right;
-  margin-left: 3.125em; }
+  padding: 0em 1em; }
 
 footer {
   position: fixed;
@@ -502,5 +525,13 @@ footer {
   margin: 0% 0.4%;
   opacity: 0.3;
   border-radius: 15em; }
+
+.leftBox-body {
+  float: left;
+  top: 20%;
+  left: 1%;
+  width: 20%;
+  padding: 10px 10px;
+  border-left: none; }
 
 /*# sourceMappingURL=stylesheet.css.map */
