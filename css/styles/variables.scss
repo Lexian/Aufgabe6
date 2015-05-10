@@ -28,11 +28,11 @@ $mainSizeHeight:4.375em;
 
 /* Slide Menubar*/
 $li: 8; /* [1] */
-$icon-size: 290px; /* [2] */
-$menu-size: 300px / 2; /* [3] */
-$unit-size: 90px;  /* [4] */
+$icon-size: 300px; /* [2] */
+$menu-size: 600px / 2; /* [3] */
+$unit-size: 70px;  /* [4] */
 $menu-position: (($menu-size * 2) - $icon-size) / -2;
-$offset: 185px; /* [5] */
+$offset: 180px; /* [5] */
 $deg: 360deg / $li; /* [6] */
 
 /*Fonts*/

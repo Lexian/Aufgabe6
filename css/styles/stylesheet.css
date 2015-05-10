@@ -69,7 +69,7 @@ nav ul li:hover > ul {
   display: block; }
 
 nav ul {
-  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.15);
   padding: 0 20px;
   border-radius: 10px;
   list-style: none;
@@ -97,13 +97,13 @@ nav ul li a {
 
 nav ul ul {
   background: #5f6975;
-  border-radius: 0px;
+  border-radius: 15em;
   padding: 0;
   position: absolute;
   top: 100%; }
 
 nav ul ul li {
-  float: none;
+  float: left;
   border-top: 1px solid #6b727c;
   border-bottom: 1px solid #575f6a;
   position: relative; }
@@ -244,9 +244,9 @@ nav ul ul ul {
   margin: auto;
   color: deepskyblue;
   border-radius: 50%;
-  height: 290px;
-  width: 290px;
-  line-height: 290px;
+  height: 300px;
+  width: 300px;
+  line-height: 300px;
   text-align: center;
   font-size: 2.75em;
   font-weight: bold;
@@ -264,9 +264,9 @@ nav ul ul ul {
 .menu {
   list-style-type: none;
   position: absolute;
-  top: -5px;
-  left: -5px;
-  border: 150px solid transparent;
+  top: -150px;
+  left: -150px;
+  border: 300px solid transparent;
   cursor: default;
   border-radius: 50%;
   transform: scale(0);
@@ -280,14 +280,14 @@ nav ul ul ul {
 
 .spread {
   position: absolute;
-  top: -185px;
-  left: -185px;
-  transform-origin: 185px 185px;
-  -webkit-transform-origin: 185px 185px;
-  -moz-transform-origin: 185px 185px;
-  -ms-transform-origin: 185px 185px;
-  -o-transform-origin: 185px 185px;
-  transform-origin: 185px 185px;
+  top: -180px;
+  left: -180px;
+  transform-origin: 180px 180px;
+  -webkit-transform-origin: 180px 180px;
+  -moz-transform-origin: 180px 180px;
+  -ms-transform-origin: 180px 180px;
+  -o-transform-origin: 180px 180px;
+  transform-origin: 180px 180px;
   transition: all 0.5s 0.1s;
   -webkit-transition: all 0.5s 0.1s;
   -moz-transition: all 0.5s 0.1s;
@@ -447,9 +447,9 @@ nav ul ul ul {
   background: white;
   font-size: 70%;
   text-decoration: none;
-  width: 90px;
-  height: 90px;
-  line-height: 90px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
   color: dodgerblue;
   border-radius: 50%;
   transition: 0.6s; }
@@ -477,7 +477,7 @@ section {
   float: left;
   width: 44%;
   padding: 10px 15px;
-  height: 70%;
+  height: 80%;
   border-right: inset;
   overflow: hidden;
   overflow-y: scroll;
@@ -485,8 +485,8 @@ section {
 
 html, body {
   height: 100%;
-  min-height: 300px;
-  min-width: 155px;
+  min-height: 600px;
+  min-width: 305px;
   max-width: 100%; }
 
 body {
