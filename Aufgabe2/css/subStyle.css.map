@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAoCA,IAAI;EAAC,gBAAgB,EAAE,kCAAkC",
+"sources": ["subStyle.scss"],
+"names": [],
+"file": "subStyle.css"
+}

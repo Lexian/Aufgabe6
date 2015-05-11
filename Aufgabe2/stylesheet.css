@@ -1,0 +1,95 @@
+.circle-container {
+  position: relative;
+  width: 20em;
+  height: 20em;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  float: left;
+  margin-left: 30em;
+  margin: 6em;
+  border: solid 10px tomato; }
+  .circle-container > * {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10em;
+    height: 10em;
+    margin: -3.33333em; }
+    .circle-container > *:nth-of-type(1) {
+      -webkit-transform: rotate(15deg) translate(10em) rotate(-15deg);
+      -ms-transform: rotate(15deg) translate(10em) rotate(-15deg);
+      -moz-transform: rotate(15deg) translate(10em) rotate(-15deg);
+      -o-transform: rotate(15deg) translate(10em) rotate(-15deg);
+      transform: rotate(15deg) translate(10em) rotate(-15deg); }
+    .circle-container > *:nth-of-type(2) {
+      -webkit-transform: rotate(60deg) translate(10em) rotate(-60deg);
+      -ms-transform: rotate(60deg) translate(10em) rotate(-60deg);
+      -moz-transform: rotate(60deg) translate(10em) rotate(-60deg);
+      -o-transform: rotate(60deg) translate(10em) rotate(-60deg);
+      transform: rotate(60deg) translate(10em) rotate(-60deg); }
+    .circle-container > *:nth-of-type(3) {
+      -webkit-transform: rotate(105deg) translate(10em) rotate(-105deg);
+      -ms-transform: rotate(105deg) translate(10em) rotate(-105deg);
+      -moz-transform: rotate(105deg) translate(10em) rotate(-105deg);
+      -o-transform: rotate(105deg) translate(10em) rotate(-105deg);
+      transform: rotate(105deg) translate(10em) rotate(-105deg); }
+    .circle-container > *:nth-of-type(4) {
+      -webkit-transform: rotate(150deg) translate(10em) rotate(-150deg);
+      -ms-transform: rotate(150deg) translate(10em) rotate(-150deg);
+      -moz-transform: rotate(150deg) translate(10em) rotate(-150deg);
+      -o-transform: rotate(150deg) translate(10em) rotate(-150deg);
+      transform: rotate(150deg) translate(10em) rotate(-150deg); }
+    .circle-container > *:nth-of-type(5) {
+      -webkit-transform: rotate(195deg) translate(10em) rotate(-195deg);
+      -ms-transform: rotate(195deg) translate(10em) rotate(-195deg);
+      -moz-transform: rotate(195deg) translate(10em) rotate(-195deg);
+      -o-transform: rotate(195deg) translate(10em) rotate(-195deg);
+      transform: rotate(195deg) translate(10em) rotate(-195deg); }
+    .circle-container > *:nth-of-type(6) {
+      -webkit-transform: rotate(240deg) translate(10em) rotate(-240deg);
+      -ms-transform: rotate(240deg) translate(10em) rotate(-240deg);
+      -moz-transform: rotate(240deg) translate(10em) rotate(-240deg);
+      -o-transform: rotate(240deg) translate(10em) rotate(-240deg);
+      transform: rotate(240deg) translate(10em) rotate(-240deg); }
+    .circle-container > *:nth-of-type(7) {
+      -webkit-transform: rotate(285deg) translate(10em) rotate(-285deg);
+      -ms-transform: rotate(285deg) translate(10em) rotate(-285deg);
+      -moz-transform: rotate(285deg) translate(10em) rotate(-285deg);
+      -o-transform: rotate(285deg) translate(10em) rotate(-285deg);
+      transform: rotate(285deg) translate(10em) rotate(-285deg); }
+    .circle-container > *:nth-of-type(8) {
+      -webkit-transform: rotate(330deg) translate(10em) rotate(-330deg);
+      -ms-transform: rotate(330deg) translate(10em) rotate(-330deg);
+      -moz-transform: rotate(330deg) translate(10em) rotate(-330deg);
+      -o-transform: rotate(330deg) translate(10em) rotate(-330deg);
+      transform: rotate(330deg) translate(10em) rotate(-330deg); }
+  .circle-container img {
+    -webkit-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    display: block;
+    max-width: 60%;
+    border-radius: 50%;
+    -webkit-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    filter: grayscale(0);
+    border: solid 5px tomato; }
+    .circle-container img:hover, .circle-container img:active {
+      -webkit-filter: grayscale(50);
+      -ms-filter: grayscale(50);
+      -moz-filter: grayscale(50);
+      -o-filter: grayscale(50);
+      filter: grayscale(50); }
+
+body {
+  background-image: url("../images/backgroundPic.png");
+  background-size: cover;
+  resize: horizontal; }
+
+/*# sourceMappingURL=stylesheet.css.map */
