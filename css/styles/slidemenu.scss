@@ -66,7 +66,7 @@
     @include transition(all, 0.6s)
   }
 
-  /* Where all the MAGIC happens: */
+
   @for $m from 1 through $li {
     .spread:nth-child(#{$m}) {
       transition-delay: $m * 0.02s;
@@ -79,7 +79,7 @@
       }
     }
   }
-} /* END .icon:hover */
+}
 
 .unit {
   position: absolute;
