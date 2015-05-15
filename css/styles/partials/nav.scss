@@ -1,0 +1,87 @@
+@import "../variables";
+@import "../placeholders";
+@import "../../../bourbon/bourbon";
+@import "../mixin";
+
+
+
+
+
+  .logo {
+    float: right;
+    height: 40px;
+    padding: 15px 30px;
+    font-size: 2em;
+    font-family: $Font-Playball;
+    color: #4294f0;
+    line-height: 40px;
+    border-left: inset 13px;
+    border-right: inset 13px;
+    border-radius: 15em;
+    margin-right: 2em;
+  }
+
+nav ul ul {
+  display: none;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+
+nav ul {
+  //background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+  //background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+  //background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%);
+
+  box-shadow: 0 0 9px rgba(0,0,0,0.15);
+  padding: 0 20px;
+  border-radius: 10px;
+  list-style: none;
+  position: relative;
+  display: inline-table;
+}
+nav ul:after {
+  content: ""; clear: both; display: block;
+}
+
+nav ul li {
+  border-right: inset;
+  border-radius: 15em;
+  float: left;
+}
+nav ul li:hover {
+
+}
+nav ul li:hover a {
+  color: #fff;
+}
+
+nav ul li a {
+  display: block; padding: 25px 40px;
+  color: #757575; text-decoration: none;
+}
+
+
+nav ul ul {
+
+  background: #5f6975; border-radius: 15em; padding: 0;
+  position: absolute; top: 100%;
+}
+nav ul ul li {
+  float: left;
+  border-top: 1px solid #6b727c;
+  border-bottom: 1px solid #575f6a; position: relative;
+}
+nav ul ul li a {
+  padding: 15px 40px;
+  color: #fff;
+}
+nav ul ul li a:hover {
+  background: #4b545f;
+}
+
+nav ul ul ul {
+  position: absolute; left: 100%; top:0;
+}

@@ -1,0 +1,130 @@
+@import "stylesheet";
+@import "variables";
+@import "slidemenu";
+
+
+.leftBox-body img {
+  border:inset;
+  height:100%;
+  padding:0;
+  width:100%;
+}
+
+.googleMap {
+
+}
+
+.leftTD {
+  font-family: $Font-FiraMono;
+}
+
+%on {
+  color: $color-text;
+  background: $color-button;
+  box-shadow: 0 20px 40px rgba(darken($color-bg, 20), 0.6);
+}
+
+%off {
+  color: darken($color-text, 60);
+  background: $color-button-dark;
+  box-shadow: none;
+}
+
+.button {
+  position: fixed;
+  top: 70%;
+  left: 30%;
+  border-radius: 15em;
+
+  //margin-top: -$height;
+  margin-left: -$width/2;
+  width: $width;
+  height: $height;
+
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 0 1px 1px $color-button-dark;
+
+  @include transform-style(preserve-3d);
+  @include transition(all $speed ease-in-out);
+
+  span {
+    display: block;
+    border: 1px solid $color-button-dark;
+    border-radius: 15em;
+    text-align: center;
+    line-height: $height;
+
+    @include transition(all $speed ease);
+  }
+
+  span:nth-child(1) {
+    @extend  %on;
+    @include transform-origin(bottom center);
+    @include transform(rotateX(0deg));
+  }
+
+  span:nth-child(2) {
+    @extend  %off;
+    @include transform-origin(top center);
+    @include transform(rotateX(-90deg));
+  }
+
+  span:nth-child(3) {
+    @extend  %off;
+    @include transform-origin(top center);
+    @include transform(rotateX(-180deg) translateY($height) translateZ($height));
+  }
+}
+
+.button:hover {
+  @include transform(translateY(-$height));
+
+  span:nth-child(1) {
+    @extend  %off;
+    @include transform(rotateX(90deg));
+  }
+
+  span:nth-child(2) {
+    @extend  %on;
+    @include transform(rotateX(0deg));
+  }
+
+  span:nth-child(3) {
+    @extend  %on;
+    @include transform(rotateX(-90deg));
+  }
+}
+
+.button:active {
+  span:nth-child(2) {
+    @extend %off;
+    @include transform(rotateX(90deg));
+  }
+
+  span:nth-child(3) {
+    @extend %on;
+    @include transform-origin(bottom center);
+    @include transform(rotateX(0deg) translateY(-$height) translateZ($height));
+  }
+}
+
+ textarea#styled {
+   width: 600px;
+   height: 120px;
+   border: 3px solid #cccccc;
+   padding: 5px;
+   font-family: Tahoma, sans-serif;
+    background-color: cornsilk;
+   background-position: bottom right;
+   background-repeat: no-repeat;
+
+   &:hover
+   &:active{
+    background-color: aquamarine;
+     border: inset;
+   }
+ }
+
+
+

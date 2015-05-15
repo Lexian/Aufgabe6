@@ -1,0 +1,75 @@
+/*Urls für BDesigns*/
+$backgroundImageHtml : "../../images/backgroundPic.png";
+$BGImageNav:"../../images/navBtnGrid.png";
+$BackgroundImageContent:"";
+
+
+/* navBar items*/
+$item:"nav-item";
+$item1Lbl:"Home";
+$item2Lbl:"Helden";
+
+$item1LblSub1:"Home";
+$item1LblSub2:"AGB'S";
+$item1LblSub3:"Impressum";
+
+
+$item2LblSub1:"Unsere Helden";
+$item2LblSub2:"Kontakt";
+
+ /*navBar attribs*/
+
+
+$imageMax:" max-height:20em";
+
+$mainSizeWidth:100%;
+$mainSizeHeight:4.375em;
+
+
+/* Slide Menubar*/
+$li: 8; /* [1] */
+$icon-size: 300px; /* [2] */
+$menu-size: 600px / 2; /* [3] */
+$unit-size: 70px;  /* [4] */
+$menu-position: (($menu-size * 2) - $icon-size) / -2;
+$offset: 180px; /* [5] */
+$deg: 360deg / $li; /* [6] */
+
+/*Fonts*/
+@import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Playball&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
+@import url(http://fonts.googleapis.com/css?family=Fira+Mono&subset=latin,cyrillic,greek,latin-ext,cyrillic-ext);
+
+$Font-Josefin : 'Josefin', serif;
+$Font-Shoju : 'Shojumaru', cursive;
+$Font-Lobster: 'Lobster', cursive;
+$Font-Abril:'Abril', cursive;
+$Font-Playball: 'Playball',cursive;
+$Font-Mono: 'Share Tech Mono',;
+$Font-FiraMono:'Fira Mono',;
+
+/*Button*/
+$color-bg: #a5e;
+$color-text: #fff;
+$color-button: #361;
+$color-button-dark: darken($color-button, 20);
+
+$width: 200px;
+$height: 40px;
+$perspective: 500px;
+$speed: 0.5s;
+
+
+
+
+
+
+
+
+
+
+

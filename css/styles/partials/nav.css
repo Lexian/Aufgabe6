@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/*Urls für BDesigns*/
+/* navBar items*/
+/*navBar attribs*/
+/*Fonts*/
+@import url(http://fonts.googleapis.com/css?family=Shojumaru&subset=latin,latin-ext);
+.nav-main > ul > li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+.nav-main {
+  display: flex;
+  width: 60%;
+  min-width: 50%;
+  max-width: 100%;
+  background-color: cornflowerblue;
+  height: 70px;
+  color: #092049;
+  border: solid #4d85ea 3px;
+  /*.ticker {
+    display: inline-block;
+    float: left;
+    width: 28%;
+    height: 53px;
+    border: inset darken(cornflowerblue, 5%) 0.2em;
+
+    background-image: $tickerBG;
+    background-size: cover;
+
+  }*/ }
+  .nav-main .Logo {
+    display: inline-block;
+    float: left;
+    width: 30%;
+    height: 48px;
+    border: inset #4d85ea 8.5px;
+    background-image: url("../../images/navBtnGrid.png");
+    background-size: 28px, cover;
+    font-family: 'Shojumaru', cursive;
+    font-size: 3em;
+    padding-left: 9px;
+    line-height: 40px; }
+    .nav-main .Logo a {
+      color: #0b2a60; }
+  .nav-main > ul {
+    float: left; }
+    .nav-main > ul > li {
+      float: left; }
+  .nav-main .nav-item {
+    height: 35px;
+    border: inset #4d85ea 8.5px;
+    background-image: url("../../images/navBtnGrid.png");
+    background-size: 25px, cover;
+    font-family: 'Shojumaru', cursive;
+    font-size: 2.5em; }
+    .nav-main .nav-item:hover {
+      opacity: 0.7; }
+
+@media only screen and (max-width: 320px) {
+  body {
+    font-size: 2em; } }
+
+/*# sourceMappingURL=nav.css.map */
