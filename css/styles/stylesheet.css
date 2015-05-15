@@ -482,7 +482,8 @@ section {
   border-right: inset;
   overflow: hidden;
   overflow-y: scroll;
-  background: url("../../images/BG_Content.png") no-repeat;
+  background: url("../../images/BG_Content.png");
+  background-repeat: no-repeat;
   background-size: cover; }
 
 html, body {
@@ -535,5 +536,8 @@ footer {
   width: 20%;
   padding: 10px 10px;
   border-left: none; }
+
+.faqList {
+  list-style-type: upper-latin; }
 
 /*# sourceMappingURL=stylesheet.css.map */

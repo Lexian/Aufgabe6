@@ -496,7 +496,8 @@ section {
   border-right: inset;
   overflow: hidden;
   overflow-y: scroll;
-  background: url("../../images/BG_Content.png") no-repeat;
+  background: url("../../images/BG_Content.png");
+  background-repeat: no-repeat;
   background-size: cover; }
 
 html, body {
@@ -549,6 +550,9 @@ footer {
   width: 20%;
   padding: 10px 10px;
   border-left: none; }
+
+.faqList {
+  list-style-type: upper-latin; }
 
 /*Urls für BDesigns*/
 /* navBar items*/
@@ -809,6 +813,9 @@ footer {
 .leftTD {
   font-family: "Fira Mono"; }
 
+.TitleFaq {
+  text-align: center; }
+
 .button span:nth-child(1), .button:hover span:nth-child(2), .button:hover span:nth-child(3), .button:active span:nth-child(3) {
   color: #fff;
   background: #361;
@@ -936,5 +943,8 @@ textarea#styled {
   textarea#styled:active {
     background-color: aquamarine;
     border: inset; }
+
+.DropdownForm {
+  width: 3em; }
 
 /*# sourceMappingURL=subStyle.css.map */

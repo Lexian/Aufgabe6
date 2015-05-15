@@ -17,6 +17,9 @@
 .leftTD {
   font-family: $Font-FiraMono;
 }
+.TitleFaq{
+  text-align: center;
+}
 
 %on {
   color: $color-text;
@@ -127,3 +130,6 @@
 
 
 
+.DropdownForm {
+  width: 3em;
+}
