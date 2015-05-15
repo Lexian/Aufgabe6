@@ -947,4 +947,11 @@ textarea#styled {
 .DropdownForm {
   width: 3em; }
 
+.description {
+  margin-top: 30em;
+  text-align: center;
+  font-family: "Playball", cursive;
+  font-size: 150%;
+  color: #cccccc; }
+
 /*# sourceMappingURL=subStyle.css.map */
