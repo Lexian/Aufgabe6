@@ -496,7 +496,8 @@ section {
   border-right: inset;
   overflow: hidden;
   overflow-y: scroll;
-  background-image: url("../../images/BG_Content.png"); }
+  background: url("../../images/BG_Content.png") no-repeat;
+  background-size: cover; }
 
 html, body {
   height: 100%;
