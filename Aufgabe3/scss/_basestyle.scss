@@ -45,6 +45,7 @@ font-family: $Font-IndieFlower;
 .myHeader {
   background-color: lighten( #a4c0e5, 0.2);
   box-shadow: 0 10px 15px rgba(darken(#ccc, 20), 0.6);
+  border: black solid 2px;
 }
 .carousel{
 

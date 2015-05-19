@@ -38,7 +38,8 @@ body {
 
 .myHeader {
   background-color: #a5c1e5;
-  box-shadow: 0 10px 15px rgba(153, 153, 153, 0.6); }
+  box-shadow: 0 10px 15px rgba(153, 153, 153, 0.6);
+  border: black solid 2px; }
 
 .carousel-inner {
   box-shadow: 0 20px 40px rgba(121, 20, 201, 0.6);
