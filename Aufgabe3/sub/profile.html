@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="de-DE" >
+<head>
+    <link rel="stylesheet" type="text/css" href="scss/_basestyle.scss"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/basestyle.css"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+
+
+    <title>Splendr - Profile</title>
+
+</head>
+<body>
+
+
+
+<header>
+    <div class="page-header myheader ">
+        <h1>Splendr.
+            <small class="titleFont"> store Ur Thought's</small>
+        </h1>
+        <div class="progress">
+            <div class="progress progress-bar-striped progress-bar active  " role="progressbar"
+                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 99.99%">
+
+            </div>
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-default mynavbar" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#"> <i class="fa fa-home"></i> </i> Home</a></li>
+                <li><a type="button" class="btn " data-toggle="modal" data-target="#modalAGB" >AGB'S</a></li>
+
+                <li><a href="#"></a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <ul class="nav navbar-nav navbar-right myLogin">
+                <li><a type="button" class="btn " data-toggle="modal" data-target="#myModal"><i
+                        class="fa fa-sign-in"></i> Sign in</a>
+
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="container">
+                            <div class="row">
+                                <div class="span12">
+                                    <div class="" id="loginModal">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                ×
+                                            </button>
+                                            <h3>Have an Account?</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="well">
+                                                <ul class="nav nav-tabs">
+                                                    <li class="active"><a href="#login" data-toggle="tab">Login</a></li>
+                                                    <li><a href="#create" data-toggle="tab">Create Account</a></li>
+                                                </ul>
+                                                <div id="myTabContent" class="tab-content">
+                                                    <div class="tab-pane active in" id="login">
+                                                        <form class="form-horizontal" action='' method="POST">
+                                                            <fieldset>
+                                                                <div id="legend">
+                                                                    <legend class="">Login</legend>
+                                                                </div>
+                                                                <div class="control-group">
+                                                                    <!-- Username -->
+                                                                    <label class="control-label"
+                                                                           for="username">Username</label>
+
+                                                                    <div class="controls">
+                                                                        <input type="text" id="username" name="username"
+                                                                               placeholder="" class="input-xlarge">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="control-group">
+                                                                    <!-- Password-->
+                                                                    <label class="control-label"
+                                                                           for="password">Password</label>
+
+                                                                    <div class="controls">
+                                                                        <input type="password" id="password"
+                                                                               name="password"
+                                                                               placeholder="" class="input-xlarge">
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="control-group">
+                                                                    <!-- Button -->
+                                                                    <div class="controls">
+                                                                        <button class="btn btn-success">Login</button>
+                                                                    </div>
+                                                                </div>
+                                                            </fieldset>
+                                                        </form>
+                                                    </div>
+                                                    <div class="tab-pane fade myRegister" id="create">
+                                                        <form id="tab">
+                                                            <label>Username</label>
+                                                            <input type="text" value="" class="input-xlarge">
+                                                            <label>First Name</label>
+                                                            <input type="text" value="" class="input-xlarge">
+                                                            <label>Last Name</label>
+                                                            <input type="text" value="" class="input-xlarge">
+                                                            <label>Email</label>
+                                                            <input type="text" value="" class="input-xlarge">
+                                                            <label>Address</label>
+                        <textarea value="Smith" rows="3" class="input-xlarge">
+                        </textarea>
+
+                                                            <div>
+                                                                <button class="btn btn-primary">Create Account</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="dropdown ">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-cogs fa-spin"></i>
+                        Optionen <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-menu-left" data-toggle="dropdown"><i class="glyphicon glyphicon-chevron-left"></i> Boards</a>
+                            <ul class="dropdown-menu">
+                                <li ><a href="#" title="erstellt ein leeres Board und speichert es direkt in die Verwaltung"> Quick Board erstellen</a></li>
+                                <li><a href="dashboard.html">Board verwalten</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"> <i class="glyphicon glyphicon-plus"></i>Quick Produkt hinzufügen</a></li>
+                        <li><a href="profile.html"><i class="glyphicon glyphicon-user"></i> Profil</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+</header>
+
+
+
+
+
+<div class="container">
+    <div class="row profile">
+        <div class="col-md-3">
+            <div class="profile-sidebar">
+                <!-- SIDEBAR USERPIC -->
+                <div class="profile-userpic">
+                    <img src="https://mms886.whatsapp.net/d/Ef1UQLvp8hMVwMj7t3-FOVVVmuE/Ap7oHnkyVAY1-3wz6fJlqD7fZvo7gz73H3kMFzerzMzw.jpg" class="img-responsive" alt="">
+                </div>
+                <!-- END SIDEBAR USERPIC -->
+                <!-- SIDEBAR USER TITLE -->
+                <div class="profile-usertitle">
+                    <div class="profile-usertitle-name">
+                        Lexi
+                    </div>
+                    <div class="profile-usertitle-job">
+                        Developer
+                    </div>
+                </div>
+                <!-- END SIDEBAR USER TITLE -->
+                <!-- SIDEBAR BUTTONS -->
+                <div class="profile-userbuttons">
+                    <button type="button" class="btn btn-success btn-sm">Follow</button>
+                    <button type="button" class="btn btn-danger btn-sm">Message</button>
+                </div>
+                <!-- END SIDEBAR BUTTONS -->
+                <!-- SIDEBAR MENU -->
+                <div class="profile-usermenu">
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-home"></i>
+                                Overview </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-user"></i>
+                                Account Settings </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="glyphicon glyphicon-ok"></i>
+                                Tasks </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-flag"></i>
+                                Help </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END MENU -->
+            </div>
+        </div>
+
+
+
+        <div class="col-md-9">
+            <div class="profile-content">
+                <div class="embed-responsive-item" id="map-canvas"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<div class="footer">-->
+<nav class="navbar navbar-fixed-bottom navbar-inverse   responsive" role="navigation">
+
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbarFooter">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+
+    <a class="navbar-brand" href="#">Copyright© 2015 Daniel Junker</a>
+    <div class="collapse navbar-collapse navbarFooter">
+        <ul  class="nav navbar-nav ">
+
+            <li class="active ">
+                <a  href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+            </li>
+            <li>
+                <a type="Button" class="btn" data-toggle="modal" data-target="#modalImpressum">Impressum</a>
+            </li>
+            <li>
+                <a type="Button" class="btn" data-toggle="modal" data-target="#modalContact">Kontakt</a>
+            </li>
+            <li>
+                <a class="not-active" href="#"><i class="fa fa-html5 myPlaceholder"> </i>  </a>
+            </li>
+            <li>
+                <a class="not-active" href="#"> <i class="icon-apple-more" myPlaceholder></i></a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+<!--</div>-->
+
+<div class="modal fade" id="modalImpressum">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Impressum</h4>
+            </div>
+            <div class="modal-body">
+                <div class='impressum'><h1>Impressum</h1><p>Angaben gemäß § 5 TMG</p><p>Max Muster <br>
+                    Musterweg<br>
+                    12345 Musterstadt <br>
+                </p><p> <strong>Vertreten durch: </strong><br>
+                    Max Muster<br>
+                </p><p><strong>Kontakt:</strong> <br>
+                    Telefon: 01234-789456<br>
+                    Fax: 1234-56789<br>
+                    E-Mail: <a href='mailto:max@muster.de'>max@muster.de</a></br></p><p><strong>Registereintrag: </strong><br>
+                    Eintragung im Registergericht: Musterstadt<br>
+                    Registernummer: 12345<br></p><p><strong>Umsatzsteuer-ID: </strong> <br>
+                    Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: Musterustid.<br><br>
+                    <strong>Wirtschafts-ID: </strong><br>
+                    Musterwirtschaftsid<br>
+                </p><p><strong>Aufsichtsbehörde:</strong><br>
+                    Musteraufsicht Musterstadt<br></p><p><strong>Berufsbezeichnung:</strong><br>
+                    Rechtsanwälte<br>
+                    Zuständige Kammer: RAK beim BGH<br>
+                    Verliehen durch: Bundesrepublik Deutschland<br>
+                </p><br>
+                    <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
+                        Max Muster <br>
+                        Musterweg<br>
+                        12345 Musterstadt <br></p> <p><strong>Haftungsausschluss: </strong><br><br><strong>Haftung für Inhalte</strong><br><br>
+                        Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.<br><br><strong>Haftung für Links</strong><br><br>
+                        Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.<br><br><strong>Urheberrecht</strong><br><br>
+                        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.<br><br><strong>Datenschutz</strong><br><br>
+                        Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. <br>
+                        Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. <br>
+                        Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.<br>
+                        <br><br><strong>Google Analytics</strong><br><br>
+                        Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. (''Google''). Google Analytics verwendet sog. ''Cookies'', Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglicht. Die durch den Cookie erzeugten Informationen über Ihre Benutzung diese Website (einschließlich Ihrer IP-Adresse) wird an einen Server von Google in den USA übertragen und dort gespeichert. Google wird diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten für die Websitebetreiber zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen zu erbringen. Auch wird Google diese Informationen gegebenenfalls an Dritte übertragen, sofern dies gesetzlich vorgeschrieben oder soweit Dritte diese Daten im Auftrag von Google verarbeiten. Google wird in keinem Fall Ihre IP-Adresse mit anderen Daten der Google in Verbindung bringen. Sie können die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website voll umfänglich nutzen können. Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.<br><br><strong>Google AdSense</strong><br><br>
+                        Diese Website benutzt Google Adsense, einen Webanzeigendienst der Google Inc., USA (''Google''). Google Adsense verwendet sog. ''Cookies'' (Textdateien), die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglicht. Google Adsense verwendet auch sog. ''Web Beacons'' (kleine unsichtbare Grafiken) zur Sammlung von Informationen. Durch die Verwendung des Web Beacons können einfache Aktionen wie der Besucherverkehr auf der Webseite aufgezeichnet und gesammelt werden. Die durch den Cookie und/oder Web Beacon erzeugten Informationen über Ihre Benutzung diese Website (einschließlich Ihrer IP-Adresse) werden an einen Server von Google in den USA übertragen und dort gespeichert. Google wird diese Informationen benutzen, um Ihre Nutzung der Website im Hinblick auf die Anzeigen auszuwerten, um Reports über die Websiteaktivitäten und Anzeigen für die Websitebetreiber zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen zu erbringen. Auch wird Google diese Informationen gegebenenfalls an Dritte übertragen, sofern dies gesetzlich vorgeschrieben oder soweit Dritte diese Daten im Auftrag von Google verarbeiten. Google wird in keinem Fall Ihre IP-Adresse mit anderen Daten der Google in Verbindung bringen. Das Speichern von Cookies auf Ihrer Festplatte und die Anzeige von Web Beacons können Sie verhindern, indem Sie in Ihren Browser-Einstellungen ''keine Cookies akzeptieren'' wählen (Im MS Internet-Explorer unter ''Extras > Internetoptionen > Datenschutz > Einstellung''; im Firefox unter ''Extras > Einstellungen > Datenschutz > Cookies''); wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website voll umfänglich nutzen können. Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.</p><br>
+                    Quelle: <a href="http://www.impressum-generator.de">Impressum Generator</a> der <a href="http://www.kanzlei-hasselbach.de">Kanzlei Hasselbach</a>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="modalAGB">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Splendr Un. Ltd.</h4>
+            </div>
+            <div class="modal-body">
+                <form action="" method="post" class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <legend>Algemeine Geschäftsbedingungen:</legend>
+                    </div>
+
+                    Allgemeine Geschäftsbedingungen der Firma BeispielShop Online<br />
+
+                    <br />
+                    <p style="font-weight: bold; padding-bottom: 10px;">§1 Geltung gegenüber Unternehmern und Begriffsdefinitionen</p>
+                    (1) Die nachfolgenden Allgemeinen Geschäftbedingungen gelten für alle Lieferungen zwischen uns und einem Verbraucher
+                    in ihrer zum Zeitpunkt der Bestellung gültigen Fassung.<br />
+                    <br />
+                    Verbraucher ist jede natürliche Person, die ein Rechtsgeschäft zu Zwecken abschließt, die überwiegend weder
+                    ihrer gewerblichen noch ihrer selbständigen beruflichen Tätigkeit zugerechnet werden können (§ 13 BGB).
+                    <br />
+
+                    <br />
+                    <p style="font-weight: bold; padding-bottom: 10px;">§2 Zustandekommen eines Vertrages, Speicherung des Vertragstextes</p>
+                    (1) Die folgenden Regelungen über den Vertragsabschluss gelten für Bestellungen über unseren Internetshop http://www.beispielshop-online.de .<br />
+                    <br />
+                    <b>(2) Im Falle des Vertragsschlusses kommt der Vertrag mit<br />
+
+                        <div style="font-weight: bold; margin-left: 20px;" >
+                            <br />
+                            BeispielShop Online<br />
+                            Klaus Muster<br />
+                            Beispielstraße 42<br />
+                            D-98765 Musterstadt<br />
+                            Registernummer 12131415<br />
+                            Registergericht Amtsgericht Musterstadt<br />
+                            <br />
+                        </div>
+                        zustande.<br /></b>
+                    <br />
+                    (3) Die Präsentation der Waren in unserem Internetshop stellen kein rechtlich bindendes Vertragsangebot unsererseits dar,
+                    sondern sind nur eine unverbindliche Aufforderungen an den Verbraucher, Waren zu bestellen. Mit der Bestellung der gewünschten Ware gibt der Verbraucher ein für
+                    ihn verbindliches Angebot auf Abschluss eines Kaufvertrages ab.<br />
+                    (4) Bei Eingang einer Bestellung in unserem Internetshop gelten folgende Regelungen:
+                    Der Verbraucher gibt ein bindendes Vertragsangebot ab, indem er die in unserem Internetshop vorgesehene Bestellprozedur erfolgreich durchläuft.<br />
+                    <br />
+                    Die Bestellung erfolgt in folgenden Schritten:<br />
+                    <br />
+                    <div class="ml20">
+
+                        1) Auswahl der gewünschten Ware<br />
+
+                        2) Bestätigen durch Anklicken der Buttons „Bestellen“ <br />
+
+                        3) Prüfung der Angaben im Warenkorb<br />
+
+                        4) Betätigung des Buttons „zur Kasse“ <br />
+
+                        5) Anmeldung im Internetshop nach Registrierung und Eingabe der Anmelderangaben (E-Mail-Adresse und Passwort). <br />
+
+                        6) Nochmalige Prüfung bzw. Berichtigung der jeweiligen eingegebenen Daten.<br />
+
+                        7) Verbindliche Absendung der Bestellung durch Anklicken des Buttons „kostenpflichtig bestellen“ bzw. „kaufen“<br />
+
+                        8) basdvbh<br />
+
+                        <br />
+                    </div>
+                    Der Verbraucher kann vor dem verbindlichen Absenden der Bestellung durch Betätigen der in dem von ihm verwendeten Internet-Browser enthaltenen „Zurück“-Taste nach
+                    Kontrolle seiner Angaben wieder zu der Internetseite gelangen, auf der die Angaben des Kunden erfasst werden und Eingabefehler berichtigen bzw. durch Schließen des
+                    Internetbrowsers den Bestellvorgang abbrechen.
+                    Wir bestätigen den Eingang der Bestellung unmittelbar durch eine automatisch generierte E-Mail („Auftragsbestätigung“). Mit dieser nehmen wir Ihr Angebot an.
+                    <br />
+                    <br />
+                    (5) Speicherung des Vertragstextes bei Bestellungen über unseren Internetshop : Wir senden Ihnen die Bestelldaten und unsere AGB per
+                    E-Mail zu. Die AGB können Sie jederzeit auch unter http://www.beispielshop-online.de/agb.html  einsehen.
+
+                    Ihre Bestelldaten sind aus Sicherheitsgründen nicht mehr über das Internet zugänglich.
+                    <br />
+
+
+                    <br />
+                    <p style="font-weight: bold; padding-bottom: 10px;">§3 Preise, Versandkosten, Zahlung, Fälligkeit</p>
+                    (1) Die angegebenen Preise enthalten die gesetzliche Umsatzsteuer und sonstige Preisbestandteile. Hinzu kommen etwaige Versandkosten.<br />
+                    <br />
+                    (2) Der Verbraucher hat die Möglichkeit der Zahlung per
+                    Vorkasse,
+
+
+
+
+                    Kreditkarte(
+                    Visa
+                    )
+
+
+
+
+                    .<br />
+                    <br />
+                    (3) Hat der Verbraucher die Zahlung per Vorkasse gewählt, so verpflichtet er sich, den Kaufpreis unverzüglich nach Vertragsschluss zu zahlen.<br />
+
+
+                    <br />
+                    <p style="font-weight: bold; padding-bottom: 10px;">§4 Lieferung</p>
+                    (1) Sofern wir dies in der Produktbeschreibung nicht deutlich anders angegeben haben, sind alle von uns angebotenen Artikel sofort versandfertig.
+                    Die Lieferung erfolgt hier spätesten innerhalb von 5 Werktagen.
+                    Dabei beginnt die Frist für die Lieferung im Falle der Zahlung per Vorkasse am Tag nach
+                    Zahlungsauftrag an die mit der Überweisung beauftragte Bank und bei allen anderen Zahlungsarten am Tag nach Vertragsschluss zu laufen.
+                    Fällt das Fristende auf einen Samstag, Sonntag oder gesetzlichen Feiertag am Lieferort, so endet die Frist am nächsten Werktag.
+                    <br /><br />
+
+                    (2) Die Gefahr des zufälligen Untergangs und der zufälligen Verschlechterung der
+                    verkauften Sache geht auch beim Versendungskauf erst mit der Übergabe der Sache an den Käufer auf diesen über.  <br />
+
+
+                    <br />
+                    <p style="font-weight: bold; padding-bottom: 10px;">§5 Eigentumsvorbehalt</p>
+                    Wir behalten uns das Eigentum an der Ware bis zur vollständigen Bezahlung des Kaufpreises vor. <br />
+
+
+
+                    <br />
+
+                    ****************************************************************************************************
+                    <br />
+                    <p style="font-weight: bold; padding-bottom: 10px;">§6 Widerrufsrecht des Kunden als Verbraucher:
+                    </p>
+
+                    <b>
+                        Widerrufsrecht für Verbraucher</b><br />
+                    <br />
+                    Verbrauchern steht ein Widerrufsrecht nach folgender Maßgabe zu, wobei Verbraucher jede natürliche Person ist, die ein Rechtsgeschäft zu Zwecken abschließt,
+                    die überwiegend weder ihrer gewerblichen noch ihrer selbständigen beruflichen Tätigkeit zugerechnet werden können:
+
+                    <br />
+                    <br />
+
+                    <p style="font-weight: bold; padding-bottom: 1px; text-align: center;">Widerrufsbelehrung</p>
+                    <br />
+                    <b>Widerrufsrecht</b><br />
+                    <br />
+                    Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen.
+                    <br />
+                    <br />
+                    Die Widerrufsfrist beträgt vierzehn Tage, ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter,
+                    der nicht der Beförderer ist, die Waren in Besitz genommen haben bzw. hat.
+
+                    <br /><br />
+                    Um Ihr Widerrufsrecht auszuüben, müssen Sie uns<br />
+                    <div style="margin-left:20px; margin-top: 5px; margin-bottom:5px;">
+                        BeispielShop Online<br />
+                        Klaus Muster<br />
+                        Beispielstraße 42<br />
+                        D-98765 Musterstadt<br />
+                        E-Mail shop@beispielshop.com<br />
+                        Telefax 05123 45678910<br />
+                    </div>
+                    mittels einer eindeutigen Erklärung (z.B. ein mit der Post versandter Brief, Telefax oder E-Mail) über Ihren Entschluss,
+                    diesen Vertrag zu widerrufen, informieren. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist.
+                    <br />
+                    <br />
+
+                    <b>Widerrufsfolgen</b>
+                    <br /><br />
+                    Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, einschließlich der
+                    Lieferkosten (mit Ausnahme der zusätzlichen Kosten, die sich daraus ergeben, dass Sie eine andere Art der Lieferung als
+                    die von uns angebotene, günstigste Standardlieferung gewählt haben), unverzüglich und spätestens binnen vierzehn Tagen
+                    ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf dieses Vertrags bei uns eingegangen ist.
+                    Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben,
+                    es sei denn, mit Ihnen wurde ausdrücklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet.
+                    <br />
+                    <br />
+
+                    Wir können die Rückzahlung verweigern, bis wir die Waren wieder zurückerhalten haben oder bis Sie den Nachweis erbracht haben,
+                    dass Sie die Waren zurückgesandt haben, je nachdem, welches der frühere Zeitpunkt ist.
+                    <br />
+                    <br />
+
+                    Sie haben die Waren unverzüglich und in jedem Fall spätestens binnen vierzehn Tagen ab dem Tag, an dem Sie uns über den
+                    Widerruf dieses Vertrages unterrichten, an uns zurückzusenden oder zu übergeben. Die Frist ist gewahrt,
+                    wenn Sie die Waren vor Ablauf der Frist von vierzehn Tagen absenden.
+                    <br />
+                    <br />
+
+                    Sie tragen die unmittelbaren Kosten der Rücksendung der Waren.<br />
+                    <br />
+
+
+                    <b>Ende der Widerrufsbelehrung</b>
+                    <br />
+                    <br />
+                    ****************************************************************************************************
+
+                    <br />
+
+
+
+
+
+                    <p style="font-weight: bold; padding-bottom: 10px;">§7 Widerrufsformular</p>
+
+                    <p style="text-align: center; font-weight: bold;">Muster-Widerrufsformular</p>
+                    (Wenn Sie den Vertrag widerrufen wollen, dann füllen Sie bitte dieses Formular aus und senden Sie es zurück.)<br />
+                    <div style="border: 1px solid #000000;padding: 10px;">
+                        An :<br />
+                        BeispielShop Online<br />
+                        Klaus Muster<br />
+                        Beispielstraße 42<br />
+                        D-98765 Musterstadt<br />
+                        E-Mail shop@beispielshop.com<br />
+                        <br />
+
+                        Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über den Kauf der folgenden Waren (*)/die Erbringung der folgenden Dienstleistung (*)<br />
+                        <br />
+                        _____________________________________________________<br />
+                        <br />
+                        Bestellt am (*)/erhalten am (*)<br />
+                        <br />
+                        __________________<br />
+                        <br />
+                        Name des/der Verbraucher(s)<br />
+                        <br />
+                        _____________________________________________________<br />
+                        <br />
+                        Anschrift des/der Verbraucher(s)<br />
+                        <br />
+                        <br />
+                        _____________________________________________________<br />
+                        <br />
+                        Unterschrift des/der Verbraucher(s) (nur bei Mitteilung auf Papier)<br />
+                        <br />
+                        __________________<br />
+                        <br />
+                        Datum<br />
+                        <br />
+                        __________________<br />
+                        <br />
+                    </div>
+                    (*) Unzutreffendes streichen.<br />
+
+
+
+                    <br />
+                    <p style="font-weight: bold; padding-bottom: 10px;">§8 Gewährleistung
+                    </p>
+
+                    Es gelten die gesetzlichen Gewährleistungsregelungen.
+                    <br />
+
+                    <br />
+                    <p style="font-weight: bold; padding-bottom: 10px;">§9 Verhaltenskodex</p>
+                    Wir haben uns den Verhaltenskodizes der folgenden Einrichtungen unterworfen:
+                    <br />
+                    <p style="margin-left: 20px;margin-top: 20px;">
+                        Euro-Label Germany<br />
+                        EHI-EuroHandelsinstitut GmbH<br />
+                        Spichernstraße 55<br />
+                        50672 Köln<br />
+                    </p>
+                    Den Euro-Label Verhaltenskodex können Sie durch Anklicken des auf unserer Webseite angebrachten Euro-Label-Siegels oder unter http://www.euro-label.com abrufen.<br />
+                    <br />und <br /><br />
+                    <p style="margin-left: 20px;">
+                        Trusted Shops GmbH<br />
+                        Colonius Carré<br />
+                        Subbelrather Straße 15c<br />
+                        50823 Köln<br />
+                    </p>
+                    Den Trusted Shops Verhaltenskodex können Sie durch Anklicken des auf unserer Webseite angebrachten Trusted-Shops-Siegels oder unter www.trustedshops.de abrufen.<br />
+
+                    <br />
+                    <p style="font-weight: bold; padding-bottom: 10px;">§10 Vertragsprache</p>
+                    Als Vertragssprache steht ausschließlich Deutsch zur Verfügung.<br />
+
+                    <br />
+                    ****************************************************************************************************<br />
+                    <p style="font-weight: bold; padding-bottom: 10px;">§11 Kundendienst</p>
+                    <b>
+                        Unser Kundendienst für Fragen, Reklamationen und Beanstandungen steht Ihnen werktags von
+                        9:00 Uhr bis
+                        17:30 Uhr unter<br />
+                        <br />
+                        <p style="margin-left: 20px">
+                            Telefon: 05123 45678911<br />
+                            Telefax: 05123 45678912<br />
+                            E-Mail: service@beispielshop.de<br />
+                        </p>
+
+
+                        zur Verfügung.</b>
+                    <br />
+                    <br />
+                    ****************************************************************************************************
+
+                    <br />
+                    <br />
+                    <p>Stand der AGB Mai.2015</p>
+
+                    <p><i><a href="http://www.agb.de">Gratis AGB</a> erstellt von agb.de</i></p>
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<div id="myModal2" class="modal fade " tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modalDetails">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="img-responsive">
+                    <form class="center-block ">
+                        <img class=" center-block modalPic" src="" id="#picId"  >
+                        <br>
+                        <ul class=" center-block table-responsive">
+                            <li> <label class="labelProdukt"></label> </li>
+                            <li> <label class="labelPrice"></label> </li>
+                            <li> <label>Erhältlich bei: </label><p>  </p> <a class="labelVendor" href=""> <i class="icon-amazon-sign"> </i></a></li>
+
+                        </ul>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn close right" data-dismiss="modal" > schließen</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade " id="modalContact">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <h1>Lorem ipsum dolor sit amet consectetuer adipiscing
+                    elit</h1>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit. Aenean commodo ligula eget dolor. Aenean massa
+                    <strong>strong</strong>. Cum sociis natoque penatibus
+                    et magnis dis parturient montes, nascetur ridiculus
+                    mus. Donec quam felis, ultricies nec, pellentesque
+                    eu, pretium quis, sem. Nulla consequat massa quis
+                    enim. Donec pede justo, fringilla vel, aliquet nec,
+                    vulputate eget, arcu. In enim justo, rhoncus ut,
+                    imperdiet a, venenatis vitae, justo. Nullam dictum
+                    felis eu pede <a class="external ext" href="#">link</a>
+                    mollis pretium. Integer tincidunt. Cras dapibus.
+                    Vivamus elementum semper nisi. Aenean vulputate
+                    eleifend tellus. Aenean leo ligula, porttitor eu,
+                    consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+                    dapibus in, viverra quis, feugiat a, tellus. Phasellus
+                    viverra nulla ut metus varius laoreet. Quisque rutrum.
+                    Aenean imperdiet. Etiam ultricies nisi vel augue.
+                    Curabitur ullamcorper ultricies nisi.</p>
+
+
+                <h1>Lorem ipsum dolor sit amet consectetuer adipiscing
+                    elit</h1>
+
+
+                <h2>Aenean commodo ligula eget dolor aenean massa</h2>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit. Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+
+                <h2>Aenean commodo ligula eget dolor aenean massa</h2>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit. Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetuer.</li>
+                    <li>Aenean commodo ligula eget dolor.</li>
+                    <li>Aenean massa cum sociis natoque penatibus.</li>
+                </ul>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit. Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+
+                <form action="#" method="post">
+                    <fieldset>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Enter your
+full name" />
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Enter
+your email address" />
+
+                        <label for="message">Message:</label>
+    <textarea id="message" placeholder="What's on your
+mind?"></textarea>
+
+                        <input type="submit" value="Send message" />
+
+                    </fieldset>
+                </form>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit. Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+
+                <table class="data">
+                    <tr>
+                        <th>Entry Header 1</th>
+                        <th>Entry Header 2</th>
+                        <th>Entry Header 3</th>
+                        <th>Entry Header 4</th>
+                    </tr>
+                    <tr>
+                        <td>Entry First Line 1</td>
+                        <td>Entry First Line 2</td>
+                        <td>Entry First Line 3</td>
+                        <td>Entry First Line 4</td>
+                    </tr>
+                    <tr>
+                        <td>Entry Line 1</td>
+                        <td>Entry Line 2</td>
+                        <td>Entry Line 3</td>
+                        <td>Entry Line 4</td>
+                    </tr>
+                    <tr>
+                        <td>Entry Last Line 1</td>
+                        <td>Entry Last Line 2</td>
+                        <td>Entry Last Line 3</td>
+                        <td>Entry Last Line 4</td>
+                    </tr>
+                </table>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit. Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+
+</body>
+<footer>
+
+
+</footer>
+
+</html>
