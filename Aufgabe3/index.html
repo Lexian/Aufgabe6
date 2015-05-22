@@ -23,12 +23,7 @@
         <h1>Splendr.
             <small class="titleFont small"> store Ur Thought's</small>
         </h1>
-        <div class="progress">
-            <div class="progress progress-bar-striped progress-bar active  " role="progressbar"
-                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 99.99%">
 
-            </div>
-        </div>
     </div>
 
 
@@ -63,29 +58,32 @@
             <ul class="nav navbar-nav navbar-right myLogin">
                 <li><a type="button" class="btn " data-toggle="modal" data-target="#myModal"><i
                         class="fa fa-sign-in"></i> Sign in</a>
-
-
                 </li>
-
                 <li class="dropdown ">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-cogs fa-spin"></i>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-cogs "></i>
                         Optionen <b class="caret"></b></a>
                     <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                         <li class="dropdown-submenu">
                             <a href="#"><i class="glyphicon glyphicon-chevron-left"></i> Boards</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"
+                                <li><a type="Button" class="btn" data-toggle="modal" data-target="#modalAddBoard"
                                        title="erstellt ein leeres Board und speichert es direkt in die Verwaltung">
-                                    Quick Board erstellen</a></li>
+                                    Board erstellen</a></li>
                                 <li><a href="sub/dashboard.html">Board verwalten</a></li>
                             </ul>
                         </li>
-                        <li><a href="#"> <i class="glyphicon glyphicon-plus"></i>Quick Produkt hinzufügen</a></li>
+                        <li><a type="Button" class="btn" data-toggle="modal" data-target="#modalAddProduct"> <i
+                                class="glyphicon glyphicon-plus"></i>Produkt hinzufügen</a></li>
                         <li><a href="sub/profile.html"><i class="glyphicon glyphicon-user"></i> Profil</a></li>
                     </ul>
                 </li>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
             </ul>
-
         </div>
         <!-- /.navbar-collapse -->
     </nav>
@@ -997,6 +995,88 @@ mind?"></textarea>
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="modalAddProduct"   style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"><i class="fa fa-plus-circle"></i> Neues Produkt anlegen</h4>
+            </div>
+            <div class="modal-body form">
+                <div class="form-group">
+                    <label for="prURL"><i class="fa fa-plus-circle"></i> Produkt Url: </label>
+                    <input type="url" class="form-control" id="prURL" placeholder="hier Url platzieren">
+                </div>
+                <div class="form-group">
+                    <label for="prName"><i class="fa fa-plus-circle"></i> Name: </label>
+                    <input type="text" class="form-control" id="prName" placeholder="Namen einfügen">
+                </div>
+                <div class="form-group">
+                    <label for="prPreis"><i class="fa fa-plus-circle"></i> Preis: </label>
+                    <input type="number" step="any" class="form-control" id="prPreis" placeholder="Preis">
+                </div>
+                <div class="form-group">
+                    <label for="prBild"><i class="fa fa-plus-circle"></i> Bild: </label>
+                    <input type="url" class="form-control" id="prBild" placeholder="url zum image">
+                </div>
+                <div class="form-group">
+                    <label for="drBoard"><i class="fa fa-plus-circle"></i> Board: </label>
+                    <form method="post" id="drBoard" class=".DropdownForm">
+
+                        <select name="Held" size="1">
+                            <option></option>
+                            <option>Technik</option>
+                            <option>leeres Board</option>
+                            <option></option>
+
+                        </select>
+                    </form>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+<div class="modal fade" id="modalAddBoard">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Board erstellen</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label for="prURL"><i class="fa fa-plus-circle"></i> Board Name: </label>
+                    <input type="url" class="form-control" id="prURL" placeholder="hier Url platzieren">
+                </div>
+                <div class="form-group">
+                    <label for="prName"><i class="fa fa-plus-circle"></i> Beschreibung </label>
+                    <input type="text" class="form-control" id="prName" placeholder="Namen einfügen">
+                </div>
+
+                <div class="form-group">
+                    <label for="prBild"><i class="fa fa-plus-circle"></i> Bild: </label>
+                    <input type="url" class="form-control" id="prBild" placeholder="url zum image">
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
