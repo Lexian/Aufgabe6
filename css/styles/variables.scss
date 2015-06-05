@@ -52,6 +52,16 @@ $Font-Playball: 'Playball',cursive;
 $Font-Mono: 'Share Tech Mono',;
 $Font-FiraMono:'Fira Mono',;
 
+/*Button*/
+$color-bg: #a5e;
+$color-text: #fff;
+$color-button: #361;
+$color-button-dark: darken($color-button, 20);
+
+$width: 200px;
+$height: 40px;
+$perspective: 500px;
+$speed: 0.5s;
 
 
 
