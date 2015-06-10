@@ -11,14 +11,17 @@ require_once '../template.php';
 
 // start page
 $db = new PollDB();
-
+$test =$_POST;
 // retrieve poll data
-if ($pollID = array_item($_REQUEST['form'], 'pollID')) {
+if ($pollID = base64_decode(array_item($_REQUEST, 'pollID'))) {
     $sql = "SELECT pollID, title, description " .
         "FROM poll_form WHERE pollID=$pollID";
     $rows = $db->queryObjectArray($sql);
 }elseif($csv_pollID = array_item($_REQUEST,'createCVS')){
     downloadCSV($db,$csv_pollID);
+    $pollID_enc =  base64_encode($csv_pollID);// TODO pollid übergeben
+    echo '<script>window.location.replace("result.php?pollID='.$pollID_enc.'")</script>';
+    exit;
 }
 
 // is pollID valid?
@@ -69,13 +72,13 @@ function show_poll_results($pollID, $title, $description, $db)
         "       COUNT(votedetails.voteID) AS cnt " .
         "FROM pollAnswers LEFT JOIN votedetails USING (answerID) " .
         "WHERE pollAnswers.pollID=$pollID " .
-        "GROUP BY pollAnswers.answerID " .
-        "ORDER BY cnt DESC, pollAnswers.ansText";
+        "GROUP BY pollAnswers.answerID " ;
     $rows = $db->queryObjectArray($sql);
 
     // show results
     form_heading_start();
-    copyfield($_SERVER['HTTP_REFERER']);
+    $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    copyfield($actual_link);
     echo "<h2>Frage:</h2>\n",
     "<p>", htmlentities($description), "</p>\n";
 
@@ -87,14 +90,14 @@ function show_poll_results($pollID, $title, $description, $db)
             $percent = 100.0 / $noOfVotes * $row->cnt;
             $res_in_percent = (round($percent) * 2);
             echo 'Antwort', $x++, ': ', $row->ansText;
-            echo '<div class="progress progress-striped active">';
+            echo '<div class="progress progress-striped active" >';
             echo ' <div class="progress-bar progress-bar-danger" role="progressbar" '
             , html_attribute("aria-valuenow", $res_in_percent),
             html_attribute("value", $res_in_percent),
             html_attribute("aria-valuemin", "0"),
             html_attribute("aria-valuemax", "100"),
-            html_attribute("style", "width:$res_in_percent%"), '>';
-            echo '<span class="sr-only">60% Complete (success)</span>';
+            html_attribute("style", "width:$percent%"), '>';
+            echo '<p>'.$row->cnt.' Stimmen</p>';
             echo '</div>';
             echo '</div>';
         }
@@ -104,10 +107,10 @@ function show_poll_results($pollID, $title, $description, $db)
         "Personen beteiligt. ";
     } else {
         foreach ($rows as $row) {
-            $percent = 100.0 / $noOfVotes * $row->cnt;
+            $percent = (100.0 / $noOfVotes) * $row->cnt;
             echo 'Antwort', $x++, ': ', $row->ansText;
             echo '<div class="progress progress-striped active">';
-            echo ' <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:0%">';
+            echo ' <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:'.$percent.'">';
             echo '<span class="sr-only">60% Complete (success)</span>';
             echo '</div>';
             echo '</div>';
@@ -118,8 +121,9 @@ function show_poll_results($pollID, $title, $description, $db)
     }
     form_panel_body_end();
     form_panel_footer_start();
-    $btnlabel ='<span class="glyphicon glyphicon-icon glyphicon-download"> CVS</span>';
-    echo '<input  type="submit" class="btn btn-warning" name="createCVS" value="',$btnlabel,'"">';
+
+    echo '<input  type="submit" class="btn btn-warning" name="createCVS" value="'.$pollID.'"">
+    <span class="glyphicon glyphicon-icon glyphicon-download">CSV</span>';
     echo '</input>  ', "\n";
 
     form_panel_footer_end();
@@ -147,33 +151,29 @@ function show_other_polls($pollID, $db)
 
 function downloadCSV($db, $pollid)
 {
-    $filename = md5($db->rows);
-    header("Pragma: public");
+    header("Content-type: text/csv");
+    header("Content-Disposition: attachment; filename=$pollid.csv");
+    header("Pragma: no-cache");
     header("Expires: 0");
-    header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-    header("Cache-Control: private",false);
-    header("Content-Type: application/octet-stream");
-    header("Content-Disposition: attachment filename={$filename};" );
-    header("Content-Transfer-Encoding: binary");
+
 
     $output = fopen("$pollid.csv", w);
 
 
-    $sql = "SELECT * FROM poll_form JOIN pollAnswers  ON poll_form.pollID = pollAnswers.pollID JOIN votes ON poll_form.pollID = votes.pollID WHERE poll_form.pollID=$pollid";
-    $rows = $db->queryObjectArray($sql);
+    $sql = 'SELECT  poll_form.title, poll_form.description, pollAnswers.ansText,
+          (select count(*) from votedetails where votedetails.answerID = pollAnswers.answerID)
+          FROM poll_form Left JOIN pollAnswers ON poll_form.pollID = pollAnswers.pollID
+          Left JOIN votes ON poll_form.pollID = votes.pollID
+          Left Join votedetails on votes.voteID = votedetails.voteID and pollAnswers.answerID = votedetails.answerID
+          WHERE poll_form.pollID='.$pollid.' group by poll_form.title, poll_form.description, pollAnswers.ansText';
+    $rows = $db->queryArray($sql);
     foreach ($rows as $line) {
         fputcsv($output, $line);
-
     }
     fclose($output);
-    exit;
 
-
-
-
-    // Output CSV-specific headers
-
-
+}
+function get_vote_detailed(){
 
 }
 

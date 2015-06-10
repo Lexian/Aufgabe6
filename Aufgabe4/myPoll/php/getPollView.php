@@ -14,8 +14,6 @@ require_once('../template.php');
 
 $db = new PollDB();
 
-
-
 if (isset($_COOKIE['userVoted'])) {
     $user_known = 1;
     $user_ID = $_COOKIE['userVoted'];
@@ -32,12 +30,18 @@ if (array_item($_POST, "form")) {
     // save data, goto result page
     if ($pollID && is_array($votes) && count($votes) > 0) {
         save_vote($pollID, $votes, $user_known, $user_ID, $db);
+
     }
 
 }
 $tmp = array_item($_POST['form'], "btnResult");
-if (($user_known == 1 && array_item($_POST['form'], "btnResult")) || ($user_known == 0 && array_item($_POST['form'], "btnResult"))) {
-    echo '<script>window.location.assign("result.php")</script>';
+if (($user_known == 1 && array_item($_POST['form'], "btnResult")) || ($user_known == 0 && array_item($_POST['form'], "btnResult")))
+{
+    echo '<script>window.location.replace("result.php?pollID='.$pollID_enc.'")</script>';
+    exit;
+}elseif ( $user_known == 0 && array_item($_POST['form'], "btnVote")){
+    $pollID_enc = base64_encode($pollID);
+    echo '<script>window.location.replace("result.php?pollID='.$pollID_enc.'")</script>';
     exit;
 }
 
@@ -98,7 +102,8 @@ function save_vote($pollID, $votes, $user_known, $user_ID, $db)
         $db->execute($sql);
     }
 
-    exit;
+
+
 
 }
 
@@ -110,7 +115,7 @@ function build_vote_form($db, $user_known)
 
     $tmp_pollID = base64_decode($_GET['title']);
     // show poll heading and description
-    form_start("result.php", getHead($db, "title", $tmp_pollID)->title, "");
+    form_start("getPollView.php", getHead($db, "title", $tmp_pollID)->title, "");
     form_heading_start();
 
     form_label(getHead($db, "description", $tmp_pollID)->description, "Frage:");
@@ -128,11 +133,11 @@ function build_vote_form($db, $user_known)
 
 }
 
-function getHead($db, $what_2_select, $condition)
+function getHead($db, $what_2_select, $pollID)
 {
 
     $sql = "SELECT $what_2_select FROM poll_form " .
-        "WHERE pollID='$condition' ";
+        "WHERE pollID='$pollID' ";
     $rows = $db->queryObjectArray($sql);
     if ($rows == FALSE || count($rows) != 1) {
         echo "<p class='center-block'>Es gibt leider noch keine Umfragen.</p>\n";
@@ -144,8 +149,7 @@ function getHead($db, $what_2_select, $condition)
 function getAnswer_Result($db, $poll)
 {
     $sql = "SELECT answerID, ansText FROM pollAnswers " .
-        "WHERE pollID='$poll' " .
-        "ORDER BY ansText";
+        "WHERE pollID='$poll' " ;
     return $rows = $db->queryObjectArray($sql);
 }
 
@@ -155,15 +159,11 @@ function form_content($rows, $user_known)
 
     // show form
     $x = A;
-    foreach ($rows as $row)
+    foreach ($rows as $row){
         if ($user_known == 1)
-            form_answer("answers[$row->answerID]", $row->answerID, $row->ansText, "radio", $x++);
+            form_answer("answers[$rows]", $row->answerID, $row->ansText, "radio", $x++);
         else
             form_answer("answer[radio]", $row->answerID, $row->ansText, "radio", $x++);
-
-    //processbars werden hier angezeigt
-    foreach ($rows as $row) {
-
     }
 
     echo "</p>\n";

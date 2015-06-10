@@ -5,7 +5,8 @@
  * Date: 31.05.15
  * Time: 01:57
  */
-include ('template.php');
+$root = $_SERVER['DOCUMENT_ROOT'];
+include ("template.php");
 ?>
 
 <div class="container jumbotron">

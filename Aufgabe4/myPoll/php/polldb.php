@@ -18,8 +18,10 @@ class PollDB
 
     function __construct()
     {
-        require_once('../admin/password.php');
+
+        require_once("../admin/password.php");
         try {
+
             $tmpUSr = base64_decode($db_usr);
             $tmpPASS = base64_decode($db_pass);
             $this->pdo = new PDO($dsn, $tmpUSr, $tmpPASS);

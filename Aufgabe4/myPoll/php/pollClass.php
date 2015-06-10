@@ -214,7 +214,10 @@ function copyfield($linkUrl)
 
 
     echo ' <strong class="btn-primary">Link</strong>', "\n";
-    echo '<label for="search-submit" class="table-bordered">', $linkUrl, '</label>';
+    echo '<input class="table-bordered" ',
+    html_attribute("value", $linkUrl),
+    html_attribute("name", $linkUrl),
+    html_attribute("type","text"),' > </input>';
     echo '<input type="hidden" id="search-submit" />';
     echo '<hr />';
 
@@ -226,6 +229,13 @@ function link_item()
     echo '<a href="#" type="modal" ></a>';
 
 }
+function get_baseURL(){
+    return $baseurl =  $_SERVER['HTTP_REFERER'];
+}
+function get_fullPATH(){
+
+}
+
 
 
 ?>

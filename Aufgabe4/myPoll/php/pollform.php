@@ -8,14 +8,7 @@ require_once 'webvotefunctions.php';
 
 include('../template.php');
 
-if (array_item($_POST, "form") && !array_item($_POST, "dismiss")) {
-    $item = array_item($_POST['form'], "title");
-    echo '<script>window.location.assign("redirecting.php?title=', $item, ' " )</script>';
-    exit;
-} elseif (array_item($_POST, "dismiss")) {
-    echo '<script>window.location.assign("../index.php")</script>';
-    exit;
-}
+
 
 $db = new PollDB();
 
@@ -49,7 +42,22 @@ if (is_array($formdata)) {
         header("Location: http://$host$uri/$extra");
         exit;
     }
+
+    if (array_item($_POST, "form") && !array_item($_POST, "dismiss")) {
+        $item = array_item($_POST['form'], "title");
+        echo '<script>window.location.assign("redirecting.php" )</script>';
+        exit;
+    } elseif (array_item($_POST, "dismiss")) {
+        echo '<script>window.location.assign("../index.php")</script>';
+        exit;
+    }
+
+
+
 }
+
+
+
 
 
 if ($showForm) {
